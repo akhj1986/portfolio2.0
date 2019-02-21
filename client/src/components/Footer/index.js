@@ -1,11 +1,12 @@
 import React from "react";
 import FooterLink from "./Link";
+import styles from "./index.module.scss";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <ul className="footer-list">
-        <li className="footer-item">&copy; Alex Harris 2018</li>
+    <div className={styles.footer}>
+      <ul className={styles.footerList}>
+        <li className={styles.footerItem}>&copy; Alex Harris 2018</li>
         <FooterLink />
       </ul>
     </div>

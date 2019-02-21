@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import styles from "./navLink.module.scss";
+import cn from "classnames";
 
 const NavLinks = props => {
   return (
@@ -9,7 +11,7 @@ const NavLinks = props => {
           fontWeight: "bold",
           borderBottom: "solid 4px #6e06d6"
         }}
-        className={props.style}
+        className={cn(styles.navItem, { [styles[props.id]]: props.id })}
         id={props.id}
         exact={props.exact}
         to={props.path}

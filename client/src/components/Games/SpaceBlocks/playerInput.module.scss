@@ -1,0 +1,33 @@
+@import "./gameMixins.scss";
+
+.container {
+  @include game-pages;
+  align-items: center;
+  h1 {
+    color: #d9fffe;
+    margin: 0 10px 20px;
+  }
+  h2 {
+    color: #ffdf2a;
+    margin: 0 10px 20px;
+    text-align: center;
+    font-size: 15px;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  input {
+    width: 250px;
+    padding: 10px;
+    margin: 0 15px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  button {
+    font-size: 20px;
+    height: 40px;
+    width: 100px;
+  }
+}

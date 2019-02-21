@@ -1,5 +1,6 @@
 import React from "react";
 import MediaQuery from "react-responsive";
+import styles from "./home.module.scss";
 
 import Photo from "./Photo";
 import Phrases from "./Phrases";
@@ -8,7 +9,7 @@ import PhotoNav from "./PhotoNav";
 
 const Home = () => {
   return (
-    <div className="container home-container">
+    <div className={styles.container}>
       <Phrases />
       <MediaQuery maxWidth={899}>
         {matches => {

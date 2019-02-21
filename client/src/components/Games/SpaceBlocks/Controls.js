@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./controls.module.scss";
 
 const GameMenu = () => {
   return (
-    <div className="control-screen">
+    <div className={styles.controlScreen}>
       <h1>Space Blocks Attack!</h1>
       <ul>
         <li>

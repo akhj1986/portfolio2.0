@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import styles from "./index.module.scss";
 
 import SpaceBlocks from "./SpaceBlocks";
 import HighScoreTable from "./HighScoreTable";
@@ -32,7 +33,7 @@ class Game extends Component {
       return <PlayerInput score={this.state.playerScore} />;
     };
     return (
-      <div id="game-page">
+      <div className={styles.container}>
         <Route exact path="/spaceblocks" component={GameMenu} />
         <Route path="/spaceblocks/play" render={myGame} />
         <Route path="/spaceblocks/scores" component={HighScoreTable} />

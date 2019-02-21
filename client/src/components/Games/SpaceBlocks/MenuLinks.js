@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import styles from "./menuLinks.module.scss";
 
 class MenuLinks extends Component {
   handleExit() {
@@ -8,8 +9,8 @@ class MenuLinks extends Component {
 
   render() {
     return (
-      <div className="game-menu-links">
-        <div className="game-specific">
+      <div className={styles.container}>
+        <div className={styles.gameSpecific}>
           <Link to="/spaceblocks/play">
             <button>Start a new game</button>
           </Link>

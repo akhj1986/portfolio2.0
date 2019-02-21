@@ -1,0 +1,32 @@
+.tableEntry {
+  width: auto;
+  color: black;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px 5px;
+}
+.even {
+  background: #a70b00;
+  color: #fffc99;
+}
+.odd {
+  background: #e5e5e5;
+}
+.playerName {
+  width: 220px;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}
+.playerScore {
+  display: flex;
+  align-self: flex-end;
+  margin: 0 5px 0 0;
+  font-weight: normal;
+}
+.inputDate {
+  font-size: 8px;
+  align-self: center;
+}

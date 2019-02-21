@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import IsSubmitting from "./IsSubmitting";
+import styles from "./playerInput.module.scss";
 
 const axios = require("axios");
 
@@ -54,7 +55,7 @@ class PlayerInput extends Component {
       return <Redirect exact to="/spaceblocks/scores" />;
     }
     return (
-      <div className="player-form">
+      <div className={styles.container}>
         <h1>You scored {this.state.playerScore} points!</h1>
         <h2>Please type your alias and submit to log your score!</h2>
         <form onSubmit={this.handleSubmit}>

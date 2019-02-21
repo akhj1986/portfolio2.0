@@ -1,0 +1,27 @@
+@import "../../scss/mixins.scss";
+
+.navItem {
+  color: white;
+  @include flex-column;
+  justify-content: center;
+  height: 30px;
+  padding: 0 5px;
+  border-bottom: solid 4px transparent;
+  &.home {
+    width: 48px;
+  }
+  &.portfolio {
+    width: 78px;
+  }
+  &.skills {
+    width: 49px;
+  }
+  &.contact {
+    width: 69px;
+  }
+}
+
+.navItem:hover {
+  color: $purpleText;
+  font-weight: bold;
+}

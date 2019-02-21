@@ -1,0 +1,27 @@
+@import "./gameMixins.scss";
+
+.controlScreen {
+  background: red;
+  @include game-pages;
+  align-items: center;
+  h1 {
+    @include headers;
+    margin: 0 15px 30px;
+  }
+  ul {
+    max-width: 500px;
+    margin: 0 0 20px;
+  }
+  li {
+    display: flex;
+    align-items: baseline;
+    margin: 20px;
+    color: #ffedd3;
+    text-shadow: 2px 2px black;
+  }
+  i {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #ff7f2a;
+  }
+}

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import data from "./textArray.json";
+import styles from "./phrases.module.scss";
+import cn from "classnames";
 
 class Phrases extends Component {
   constructor(props) {
@@ -40,10 +42,12 @@ class Phrases extends Component {
 
   render() {
     return (
-      <div className="phrases">
-        <h1 className={this.state.displayClass}>{`${
-          this.state.displayText
-        }`}</h1>
+      <div className={styles.phrases}>
+        <h1
+          className={cn({
+            [styles[this.state.displayClass]]: this.state.displayClass
+          })}
+        >{`${this.state.displayText}`}</h1>
       </div>
     );
   }

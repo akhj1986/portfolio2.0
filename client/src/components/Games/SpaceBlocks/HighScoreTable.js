@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TableEntry from "./TableEntry";
 import { Link } from "react-router-dom";
 import IsSubmitting from "./IsSubmitting";
+import styles from "./highScoreTable.module.scss";
 
 const axios = require("axios");
 
@@ -44,9 +45,7 @@ class HighScoreTable extends Component {
       .slice(0, 10)
       .map((info, i) => {
         let classID = "";
-        i % 2 === 0
-          ? (classID = "even table-entry")
-          : (classID = "odd table-entry");
+        i % 2 === 0 ? (classID = "even") : (classID = "odd");
         return (
           <TableEntry
             key={info._id}
@@ -58,7 +57,7 @@ class HighScoreTable extends Component {
         );
       });
     return (
-      <div className="score-table">
+      <div className={styles.scoreTable}>
         <h1>Space Blocks Attack!</h1>
         <h2>High Scores</h2>
         <ul>{highScores}</ul>

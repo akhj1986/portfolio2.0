@@ -1,0 +1,22 @@
+@import "../../scss//mixins.scss";
+
+.footer {
+  background: #e2e2e2;
+  width: 100%;
+}
+.footerList {
+  @include flex-row;
+  padding: 10px 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+.footerItem {
+  margin: 0 10px 3px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+.footerItem:hover {
+  color: $greyPurple;
+  font-weight: bold;
+}

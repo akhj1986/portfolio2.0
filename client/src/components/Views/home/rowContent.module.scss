@@ -1,0 +1,19 @@
+@import "../../../scss/mixins.scss";
+
+.rowContent {
+  @include flex-row;
+  align-items: center;
+  margin: 0 0 30px;
+}
+
+.headShot {
+  align-self: center;
+  margin: 0 0 40px;
+  img {
+    height: 120px;
+    width: 120px;
+    margin: 0;
+    border: solid 1px $greyPurple;
+    border-radius: 100px;
+  }
+}

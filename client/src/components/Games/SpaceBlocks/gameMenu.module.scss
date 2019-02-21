@@ -1,0 +1,12 @@
+@import "./gameMixins.scss";
+
+.gameMenu {
+  @include game-pages;
+  h1 {
+    @include headers;
+  }
+  h2 {
+    @include headers;
+    font-size: 15px;
+  }
+}

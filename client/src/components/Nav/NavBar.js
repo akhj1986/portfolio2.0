@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NavLink from "./NavLink";
 import data from "../Header/data.json";
+import styles from "./navBar.module.scss";
 
 class NavBar extends Component {
   constructor(props) {
@@ -31,15 +32,14 @@ class NavBar extends Component {
         path={route.path}
         exact={route.exact}
         text={route.text}
-        style={route.active ? "nav-item current" : "nav-item"}
-        id={route.id}
+        id={route.routeName}
         handleClick={this.handleClick}
       />
     ));
 
     return (
-      <div className="nav-bar">
-        <ul id="navigation" className="nav-list">
+      <div className={styles.navBar}>
+        <ul id="navigation" className={styles.navList}>
           {routes}
         </ul>
       </div>

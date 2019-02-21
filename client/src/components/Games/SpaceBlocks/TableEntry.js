@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import styles from "./tableEntry.module.scss";
+import cn from "classnames";
+
 const moment = require("moment");
 
 class TableEntry extends Component {
@@ -10,10 +13,14 @@ class TableEntry extends Component {
   }
   render() {
     return (
-      <li className={this.props.elementClass}>
-        <span className="player-name">{this.props.name}</span>
-        <span className="player-score">{this.props.score}</span>
-        <span className="input-date">{this.state.date}</span>
+      <li
+        className={cn(styles.tableEntry, {
+          [styles[this.props.elementClass]]: this.props.elementClass
+        })}
+      >
+        <span className={styles.playerName}>{this.props.name}</span>
+        <span className={styles.playerScore}>{this.props.score}</span>
+        <span className={styles.inputDate}>{this.state.date}</span>
       </li>
     );
   }

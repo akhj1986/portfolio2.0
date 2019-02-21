@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
+import styles from "./spaceBlocks.module.scss";
 
 import data from "./enemies.json";
 
@@ -969,15 +970,16 @@ class SpaceInvaders extends Component {
       return <Redirect exact to="/spaceblocks/input" />;
     }
     return (
-      <div className="game-screen">
+      <div className={styles.container}>
         <canvas
+          className={styles.gameCanvas}
           id="game-canvas"
           ref={this.c}
           width="700"
           height="500"
           style={{ background: "black" }}
         />
-        <div className="game-status-bar">
+        <div className={styles.gameStatusBar}>
           <div>
             <h3 id="score">Score: 0</h3>
             <h3 id="charge">Charge: 0</h3>

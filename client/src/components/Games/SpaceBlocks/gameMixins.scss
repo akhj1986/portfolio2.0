@@ -1,0 +1,17 @@
+@mixin game-pages {
+  height: 99vh;
+  width: 99vw;
+  background: #010922;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: silver ridge 5px;
+}
+
+@mixin headers {
+  text-align: center;
+  color: #ffdf2a;
+  text-shadow: black 2px 2px;
+  margin: 0 15px 60px;
+  font-size: 30px;
+}

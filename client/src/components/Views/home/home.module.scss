@@ -1,0 +1,9 @@
+@import "../../../scss/mixins.scss";
+
+.container {
+  @include flex-column;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  background: white;
+  padding: 45px 0 0 0;
+}

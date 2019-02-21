@@ -1,0 +1,25 @@
+@import "./gameMixins.scss";
+
+.scoreTable {
+  @include game-pages;
+  align-items: center;
+  list-style: none;
+  h1 {
+    @include headers;
+    margin: 0 15px 30px;
+  }
+  h2 {
+    text-align: center;
+    color: #d9fffe;
+    margin: 0 0 10px;
+  }
+  ul {
+    border: #555 ridge 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    width: 80vw;
+    min-width: 250px;
+    max-width: 400px;
+  }
+}

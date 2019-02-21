@@ -1,0 +1,19 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+$blueBack: #f0eefa;
+$purpleBack: #ab63fe;
+$purpleText: #6e06d6;
+$greyPurple: rgb(139, 110, 137);
+$marineBack: #00e6ff;

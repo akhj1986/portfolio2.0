@@ -2,40 +2,40 @@
   "texts": [
     {
       "text": "Web development using the latest technologies...",
-      "className": "small-text"
+      "className": "smallText"
     },
     {
       "text": "Web development using the latest technologies...",
-      "className": "small-text"
+      "className": "smallText"
     },
     {
       "text": "React Framework",
-      "className": "large-text"
+      "className": "largeText"
     },
     {
       "text": "JavaScript ES6",
-      "className": "large-text"
+      "className": "largeText"
     },
     {
       "text": "HTML5, CSS3",
-      "className": "large-text"
+      "className": "largeText"
     },
 
     {
       "text": "...and responsive, mobile-first design...",
-      "className": "small-text"
+      "className": "smallText"
     },
     {
       "text": "...and responsive, mobile-first design...",
-      "className": "small-text"
+      "className": "smallText"
     },
     {
       "text": "Flexbox",
-      "className": "large-text"
+      "className": "largeText"
     },
     {
       "text": "Bootstrap",
-      "className": "large-text"
+      "className": "largeText"
     }
   ]
 }
