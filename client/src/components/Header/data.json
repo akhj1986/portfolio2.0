@@ -1,0 +1,43 @@
+{
+  "routes": [
+    {
+      "routeName": "home",
+      "active": true,
+      "path": "/",
+      "exact": true,
+      "text": "Home",
+      "id": "home-link"
+    },
+    {
+      "routeName": "portfolio",
+      "active": false,
+      "path": "/portfolio",
+      "text": "Portfolio",
+      "id": "portfolio-link"
+    },
+    {
+      "routeName": "skills",
+      "active": false,
+      "path": "/skills",
+      "text": "Skills",
+      "id": "skills-link"
+    },
+    {
+      "routeName": "contact",
+      "active": false,
+      "path": "/contact",
+      "text": "Contact",
+      "id": "contact-link"
+    }
+  ],
+
+  "codeLang": [
+    "fab fa-react",
+    "fab fa-js",
+    "fab fa-html5",
+    "fab fa-css3",
+    "fab fa-sass",
+    "fab fa-node",
+    "fab fa-npm"
+  ]
+}

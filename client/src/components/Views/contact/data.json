@@ -1,0 +1,38 @@
+{
+  "contactDetails": [
+    {
+      "type": "email",
+      "id": 1,
+      "aClass": "contact-link",
+      "href": "mailto:akhj1986@gmail.com",
+      "iClass": "far fa-envelope",
+      "text": "akhj1986@gmail.com"
+    },
+    {
+      "type": "phone",
+      "id": 2,
+      "aClass": "contact-link",
+      "href": "tel:+44-7383-156359",
+      "iClass": "fas fa-mobile-alt",
+      "text": "+44 7383 156359"
+    },
+    {
+      "type": "cv",
+      "id": 3,
+      "aClass": "contact-link",
+      "href": "pdf",
+      "target": "_blank",
+      "iClass": "far fa-file",
+      "text": "CV: Download"
+    },
+    {
+      "type": "linked-in",
+      "id": 4,
+      "aClass": "contact-link",
+      "href": "https://www.linkedin.com/in/alex-harris-jedamski",
+      "target": "_blank",
+      "iClass": "fab fa-linkedin-in",
+      "text": "LinkedIn"
+    }
+  ]
+}

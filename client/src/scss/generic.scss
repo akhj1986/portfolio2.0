@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Scada:400,700");
+@import url("https://fonts.googleapis.com/css?family=Russo+One");
+
+body {
+  //font-family: "Ubuntu Mono", monospace;
+  font-family: "Scada", sans-serif;
+  letter-spacing: 2px;
+  color: #555;
+  p {
+    line-height: 1.2em;
+    font-size: 16px;
+  }
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+li {
+  font-size: 15px;
+}
+
+.footer-item {
+  color: #9e9a9a;
+}

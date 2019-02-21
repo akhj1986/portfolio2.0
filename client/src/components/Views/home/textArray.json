@@ -1,0 +1,41 @@
+{
+  "texts": [
+    {
+      "text": "Web development using the latest technologies...",
+      "className": "small-text"
+    },
+    {
+      "text": "Web development using the latest technologies...",
+      "className": "small-text"
+    },
+    {
+      "text": "React Framework",
+      "className": "large-text"
+    },
+    {
+      "text": "JavaScript ES6",
+      "className": "large-text"
+    },
+    {
+      "text": "HTML5, CSS3",
+      "className": "large-text"
+    },
+
+    {
+      "text": "...and responsive, mobile-first design...",
+      "className": "small-text"
+    },
+    {
+      "text": "...and responsive, mobile-first design...",
+      "className": "small-text"
+    },
+    {
+      "text": "Flexbox",
+      "className": "large-text"
+    },
+    {
+      "text": "Bootstrap",
+      "className": "large-text"
+    }
+  ]
+}
