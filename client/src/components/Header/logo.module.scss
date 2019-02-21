@@ -29,3 +29,64 @@
     font-size: 14px;
   }
 }
+
+@media screen and (min-width: 490px) {
+  .title {
+    @include flex-row;
+    padding: 0 40px 0 34px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .logoTitle {
+    flex-direction: row;
+    align-items: center;
+  }
+  .logo {
+    flex: 0 1 auto;
+    width: 120px;
+    height: auto;
+  }
+  .heading {
+    h2 {
+      padding: 37px 0 0;
+      margin: 0 0 0 10px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    padding: 0 80px 0 74px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .title {
+    height: 180px;
+  }
+  .logo {
+    width: 150px;
+  }
+  .heading {
+    h2 {
+      font-size: 25px;
+      margin: 0 0 0 25px;
+      padding: 47px 0 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .title {
+    padding: 0 120px 0 114px;
+  }
+  .logoTitle {
+    margin: auto;
+    flex: 1 0 auto;
+    justify-content: space-between;
+  }
+  .heading {
+    flex: 1 0 auto;
+  }
+}

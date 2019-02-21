@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MediaQuery from "react-responsive";
+import styles from "./link.module.scss";
 
 const FooterLink = () => {
   return (
@@ -8,8 +9,8 @@ const FooterLink = () => {
       {matches => {
         if (matches) {
           return (
-            <li className="footer-item">
-              <Link className="footer-item" to="/contact">
+            <li className={styles.footerItem}>
+              <Link className={styles.footerItem} to="/contact">
                 Contact
               </Link>
             </li>

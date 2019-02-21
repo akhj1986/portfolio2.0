@@ -26,3 +26,45 @@
   transition: font-size 0.3s;
   transition: color 0.3s;
 }
+
+@media screen and (min-width: 490px) {
+  .navBarIcons {
+    margin: 0 0 0 10px;
+  }
+  .codeLangSkills {
+    font-size: 20px;
+    padding: 0 0 0 5px;
+  }
+  .codeLangSkills:hover {
+    font-size: 21px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .navBarIcons {
+    margin: 0 0 0 200px;
+    font-size: 12px;
+  }
+  .codeLangSkills {
+    padding: 0 0 0 10px;
+    font-size: 50px;
+  }
+  .codeLangSkills:hover {
+    font-size: 50.5px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .navBarIcons {
+    margin: 0 0 0 310px;
+  }
+  .navBar {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .navBarIcons {
+    margin: 0 50px 0 450px;
+  }
+}

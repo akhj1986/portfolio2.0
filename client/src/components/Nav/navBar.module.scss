@@ -12,3 +12,43 @@
   padding: 3px 0 0;
   align-items: center;
 }
+
+@media screen and (min-width: 550px) {
+  .navList {
+    justify-content: flex-start;
+    li {
+      margin: 0 55px 0 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navList {
+    padding: 3px 77px 0;
+    margin: auto;
+    li {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .navList {
+    li {
+      margin: 0 75px 0 0;
+    }
+  }
+}
+@media screen and (min-width: 1080px) {
+  .navBar {
+    display: flex;
+  }
+  .navList {
+    padding: 3px 117px 0;
+    margin: auto;
+    flex: 1 0 auto;
+    li {
+      margin: 0 110px 0 0;
+    }
+  }
+}

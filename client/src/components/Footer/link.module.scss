@@ -1,0 +1,11 @@
+@import "../../scss//mixins.scss";
+
+.footerItem {
+  margin: 0 10px 3px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+.footerItem:hover {
+  color: $greyPurple;
+  font-weight: bold;
+}
