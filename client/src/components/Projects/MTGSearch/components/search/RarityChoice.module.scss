@@ -1,0 +1,18 @@
+.container {
+  background: rgb(219, 219, 219);
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 15px;
+  color: black;
+}
+
+.rarityCheck {
+  height: 18px;
+  margin: 0 8px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}

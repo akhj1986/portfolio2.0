@@ -1,16 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import GameThumbnail from "../../../img/GameThumbnail.jpg";
+import MtgThumbnail from "../../../img/mtg.png";
 import styles from "./portfolioLinks.module.scss";
 
 const PortfolioLinks = () => {
   return (
     <div className={styles.portfolioLinks}>
-      <div className={styles.gameLink}>
+      <div className={styles.projectLink}>
         <Link to="/spaceblocks" target="_blank">
           <img src={GameThumbnail} alt="Space Blocks Attack" />
         </Link>
         <p>Space Blocks Attack!</p>
+      </div>
+      <div className={styles.projectLink}>
+        <Link to="/mtgsearch" target="_blank">
+          <img src={MtgThumbnail} alt="MTG search engine" />
+        </Link>
+        <p>MTG Search Engine</p>
       </div>
       <div className={styles.repositoryLink}>
         <a
