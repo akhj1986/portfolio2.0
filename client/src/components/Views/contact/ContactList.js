@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ContactLink from "./ContactLink";
 import data from "./data.json";
 import pdf from "./CVaHarrisJan2019.pdf";
+import styles from "./contactList.module.scss";
 
 class ContactList extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class ContactList extends Component {
         text={contact.text}
       />
     ));
-    return <div className="contacts">{contactComponents}</div>;
+    return <div className={styles.contacts}>{contactComponents}</div>;
   }
 }
 

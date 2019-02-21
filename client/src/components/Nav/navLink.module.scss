@@ -18,10 +18,17 @@
   }
   &.contact {
     width: 69px;
+    display: none;
   }
 }
 
 .navItem:hover {
   color: $purpleText;
   font-weight: bold;
+}
+
+@media screen and (min-width: 490px) {
+  .navItem.contact {
+    display: flex;
+  }
 }

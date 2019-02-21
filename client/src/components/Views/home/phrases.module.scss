@@ -16,3 +16,39 @@
   font-size: 20px;
   text-align: center;
 }
+
+@media screen and (min-width: 900px) {
+  .phrases {
+    margin: 0 0 50px;
+    padding: 0 80px;
+    justify-content: flex-end;
+    align-self: inherit;
+    h1 {
+      width: 450px;
+    }
+  }
+  .largeText {
+    font-size: 50px;
+  }
+  .smallText {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .phrases {
+    height: auto;
+    width: auto;
+    padding: 0;
+    h1 {
+      width: 600px;
+      height: 80px;
+    }
+  }
+  .largeText {
+    font-size: 70px;
+  }
+  .smallText {
+    font-size: 40px;
+  }
+}

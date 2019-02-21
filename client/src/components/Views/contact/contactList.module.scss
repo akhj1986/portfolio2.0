@@ -1,0 +1,21 @@
+@import "../../../scss/mixins.scss";
+
+.contacts {
+  @include flex-column;
+  padding: 0 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contacts {
+    @include flex-row;
+    padding: 0;
+    max-width: 1100px;
+  }
+}

@@ -3,3 +3,10 @@
   color: #555;
   font-weight: bold;
 }
+
+@media screen and (min-width: 900px) {
+  .learnMore {
+    width: 0px;
+    display: none;
+  }
+}

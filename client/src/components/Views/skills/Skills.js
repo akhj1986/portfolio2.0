@@ -1,11 +1,12 @@
 import React from "react";
+import styles from "./skills.module.scss";
 
 const Skills = () => {
   return (
     <div id="skills-page">
-      <div className="container">
-        <div className="paragraph">
-          <h1 className="skills-header">Skills</h1>
+      <div className={styles.container}>
+        <div className={styles.paragraph}>
+          <h1>Skills</h1>
           <p>
             Hello, I am Alex Harris-Jedamski! I am a motivated and highly
             educated learner stepping into the world of professional web

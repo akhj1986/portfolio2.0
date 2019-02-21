@@ -4,3 +4,17 @@
   @include flex-column;
   flex: 1 0 auto;
 }
+
+@media screen and (min-width: 900px) {
+  .container {
+    padding: 0 80px;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .container {
+    padding: 0 120px;
+    justify-content: flex-start;
+  }
+}

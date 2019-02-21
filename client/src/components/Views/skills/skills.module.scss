@@ -1,0 +1,45 @@
+@import "../../../scss/mixins.scss";
+
+.container {
+  @include flex-column;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  background: white;
+  padding: 45px 0 0 0;
+  h1 {
+    display: flex;
+    margin: 0 0 30px;
+  }
+}
+
+.paragraph {
+  padding: 0 40px;
+  margin: 0 0 20px;
+  p {
+    margin: 0 0 10px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph {
+    padding: 0 80px;
+    margin: 0 0 40px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    max-width: 1170px;
+    margin: auto;
+  }
+  .paragraph {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .container {
+    padding: 60px 0 0;
+  }
+}

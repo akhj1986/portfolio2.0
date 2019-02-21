@@ -1,0 +1,60 @@
+.container {
+  h1 {
+    display: flex;
+    padding: 0 40px;
+    margin: 0 0 30px;
+  }
+}
+
+.paragraph {
+  padding: 0 40px;
+  margin: 0 0 20px;
+  p {
+    margin: 0 0 10px 0;
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .paragraph {
+    margin: 0 0 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    h1 {
+      padding: 0 80px;
+      margin: 0 0 45px;
+    }
+  }
+  .paragraph {
+    padding: 0 80px;
+    margin: 0 0 40px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    h1 {
+      padding: 0;
+    }
+  }
+  .paragraph {
+    padding: 0;
+    margin: 0 auto 20px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .paragraph {
+    max-width: 1170px;
+    margin: 0 auto 20;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .paragraph {
+    margin: 0 0 50px;
+  }
+}

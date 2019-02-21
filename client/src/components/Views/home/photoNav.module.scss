@@ -25,6 +25,12 @@
   }
 }
 
+@media screen and (min-width: 1080px) {
+  .photoHomeNav {
+    margin: 0 auto 0;
+  }
+}
+
 @media screen and (min-width: 1300px) {
   .photoHomeNav {
     p {
