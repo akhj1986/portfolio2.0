@@ -12,7 +12,7 @@ const Logo = () => {
           <img src={logo} className={styles.logo} alt="AH" />
         </Link>
         <div className={styles.heading}>
-          <h2>Front-End Developer</h2>
+          <h2>Alex Harris-Jedamski</h2>
           <KnownScripts />
         </div>
       </div>

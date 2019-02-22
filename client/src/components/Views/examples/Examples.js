@@ -1,12 +1,12 @@
 import React from "react";
 import Paragraph from "./Paragraph";
-import styles from "./portfolio.module.scss";
+import styles from "./examples.module.scss";
 
 const Portfolio = () => {
   return (
-    <div id="portfolio">
+    <div id="examples">
       <div className={styles.container}>
-        <div className="portfolio-content">
+        <div>
           <Paragraph />
         </div>
       </div>

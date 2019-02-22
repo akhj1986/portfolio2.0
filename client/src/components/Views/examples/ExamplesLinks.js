@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import GameThumbnail from "../../../img/GameThumbnail.jpg";
 import MtgThumbnail from "../../../img/mtg.png";
-import styles from "./portfolioLinks.module.scss";
+import styles from "./examplesLinks.module.scss";
 
-const PortfolioLinks = () => {
+const ExamplesLinks = () => {
   return (
-    <div className={styles.portfolioLinks}>
+    <div className={styles.examplesLinks}>
       <div className={styles.projectLink}>
         <Link to="/spaceblocks" target="_blank">
           <img src={GameThumbnail} alt="Space Blocks Attack" />
@@ -33,4 +33,4 @@ const PortfolioLinks = () => {
   );
 };
 
-export default PortfolioLinks;
+export default ExamplesLinks;

@@ -9,6 +9,9 @@
   h2 {
     margin: 0 0 15px;
   }
+  button:hover {
+    cursor: pointer;
+  }
 }
 
 .searchForm {
@@ -47,10 +50,6 @@
   letter-spacing: 2px;
   font-size: 20px;
   border-radius: 15px;
-}
-
-button:hover {
-  cursor: pointer;
 }
 
 .advancedSearch {

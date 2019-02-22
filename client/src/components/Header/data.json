@@ -9,11 +9,11 @@
       "id": "home-link"
     },
     {
-      "routeName": "portfolio",
+      "routeName": "examples",
       "active": false,
-      "path": "/portfolio",
-      "text": "Portfolio",
-      "id": "portfolio-link"
+      "path": "/examples",
+      "text": "Examples",
+      "id": "examples-link"
     },
     {
       "routeName": "skills",
