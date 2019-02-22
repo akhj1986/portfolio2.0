@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import styles from "./spaceBlocks.module.scss";
+import { connect } from "react-redux";
+import { logToStore } from "../../../store/actions/scoreLog";
 
 import data from "./enemies.json";
 
@@ -9,9 +11,16 @@ class SpaceInvaders extends Component {
     super(props);
     this.c = React.createRef();
     this.state = {
-      endGame: this.props.gameState
+      endGame: false,
+      score: 0
     };
   }
+
+  updateScore = score => {
+    this.setState({
+      score
+    });
+  };
 
   componentDidMount() {
     const canvas = this.c.current;
@@ -543,7 +552,7 @@ class SpaceInvaders extends Component {
     // lose and win functions -------------------------------------------------------------------------------------------
 
     const lose = level => {
-      this.props.updateScore(tempScore);
+      this.updateScore(tempScore);
       if (level === "one") {
         clearInterval(animateInit);
       }
@@ -602,6 +611,7 @@ class SpaceInvaders extends Component {
       document.addEventListener("keydown", event => {
         const key = event.keyCode;
         if (key === 13) {
+          this.props.logToStore(this.state.score);
           setTimeout(
             this.setState({
               endGame: true
@@ -947,12 +957,13 @@ class SpaceInvaders extends Component {
           cH * 0.55,
           400
         );
-        this.props.updateScore(tempScore);
+        this.updateScore(tempScore);
         clearInterval(animateInitFifteen);
         levelDeterminer = "win";
         document.addEventListener("keydown", event => {
           const key = event.keyCode;
           if (key === 13 && levelDeterminer === "win") {
+            this.props.logToStore(this.state.score);
             setTimeout(
               this.setState({
                 endGame: true
@@ -993,4 +1004,13 @@ class SpaceInvaders extends Component {
   }
 }
 
-export default SpaceInvaders;
+const mapDispatchToProps = dispatch => {
+  return {
+    logToStore: score => dispatch(logToStore(score))
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(SpaceInvaders);

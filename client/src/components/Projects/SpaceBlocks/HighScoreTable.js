@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TableEntry from "./TableEntry";
 import { Link } from "react-router-dom";
-import IsSubmitting from "./IsSubmitting";
+import Conditional from "./Conditional";
 import styles from "./highScoreTable.module.scss";
 
 const axios = require("axios");
@@ -11,7 +11,8 @@ class HighScoreTable extends Component {
     super(props);
     this.state = {
       scores: [],
-      isLoading: true
+      isLoading: true,
+      error: false
     };
     this.loaded = this.loaded.bind(this);
   }
@@ -26,6 +27,13 @@ class HighScoreTable extends Component {
       })
       .then(() => {
         this.loaded();
+      })
+      .catch(err => {
+        console.log("Error:", err);
+        this.setState({
+          error: true,
+          isLoading: false
+        });
       });
   }
 
@@ -40,28 +48,32 @@ class HighScoreTable extends Component {
   }
 
   render() {
-    const highScores = this.state.scores
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 10)
-      .map((info, i) => {
-        let classID = "";
-        i % 2 === 0 ? (classID = "even") : (classID = "odd");
-        return (
-          <TableEntry
-            key={info._id}
-            elementClass={classID}
-            name={info.name}
-            score={info.score}
-            date={info.create_date}
-          />
-        );
-      });
     return (
       <div className={styles.scoreTable}>
         <h1>Space Blocks Attack!</h1>
         <h2>High Scores</h2>
-        <ul>{highScores}</ul>
-        <IsSubmitting submitting={this.state.isLoading} />
+        <ul>
+          {this.state.scores
+            .sort((a, b) => b.score - a.score)
+            .slice(0, 10)
+            .map((info, i) => {
+              let classID = "";
+              i % 2 === 0 ? (classID = "even") : (classID = "odd");
+              return (
+                <TableEntry
+                  key={info._id}
+                  elementClass={classID}
+                  name={info.name}
+                  score={info.score}
+                  date={info.create_date}
+                />
+              );
+            })}
+        </ul>
+        {this.state.error ? (
+          <h1 className={styles.failed}>Failed to fetch scores from server!</h1>
+        ) : null}
+        <Conditional submitting={this.state.isLoading} />
         <br />
         <Link to="/spaceblocks">
           <button>Back to menu</button>

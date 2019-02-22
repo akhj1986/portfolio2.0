@@ -1,22 +1,18 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
-import IsSubmitting from "./IsSubmitting";
+import { Redirect, Link } from "react-router-dom";
+import Conditional from "./Conditional";
 import styles from "./playerInput.module.scss";
-
-const axios = require("axios");
+import { connect } from "react-redux";
+import { postScore } from "../../../store/actions/scoreLog";
 
 class PlayerInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      playerName: "",
-      playerScore: this.props.score,
-      toTable: false,
-      isSubmitting: false
+      playerName: ""
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.loading = this.loading.bind(this);
   }
 
   handleChange(event) {
@@ -26,37 +22,18 @@ class PlayerInput extends Component {
     });
   }
 
-  loading() {
-    this.setState({
-      isSubmitting: true
-    });
-  }
-
   handleSubmit(event) {
-    this.loading();
     event.preventDefault();
-    axios
-      .post("https://spaceblocksattack.herokuapp.com/api/scores", {
-        name: this.state.playerName,
-        score: this.state.playerScore
-      })
-      .then(() => {
-        this.setState({
-          toTable: true
-        });
-      })
-      .catch(err => {
-        console.log("err", err);
-      });
+    this.props.postScore(this.state.playerName, this.props.score);
   }
 
   render() {
-    if (this.state.toTable === true) {
+    if (this.props.toTable === true) {
       return <Redirect exact to="/spaceblocks/scores" />;
     }
     return (
       <div className={styles.container}>
-        <h1>You scored {this.state.playerScore} points!</h1>
+        <h1>You scored {this.props.score} points!</h1>
         <h2>Please type your alias and submit to log your score!</h2>
         <form onSubmit={this.handleSubmit}>
           <input
@@ -69,10 +46,37 @@ class PlayerInput extends Component {
           />
           <button className="submit-button">Submit</button>
         </form>
-        <IsSubmitting submitting={this.state.isSubmitting} />
+        <Conditional
+          submitting={this.props.submitting}
+          error={this.props.errRender}
+        />
+        {this.props.errRender ? (
+          <div className={styles.errorDiv}>
+            <span>Try submitting again...or</span>
+            <Link to="/spaceblocks/scores">Continue without posting score</Link>
+          </div>
+        ) : null}
       </div>
     );
   }
 }
 
-export default PlayerInput;
+const mapStateToProps = state => {
+  return {
+    score: state.spaceBlocks.score,
+    toTable: state.spaceBlocks.toTable,
+    submitting: state.spaceBlocks.submitting,
+    errRender: state.spaceBlocks.errRender
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    postScore: (playerName, score) => dispatch(postScore(playerName, score))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PlayerInput);

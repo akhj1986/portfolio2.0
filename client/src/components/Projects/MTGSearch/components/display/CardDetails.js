@@ -9,7 +9,7 @@ const CardDetails = props => {
       {card ? (
         <div className={styles.imageDisplayed}>
           <h1>{card.name}</h1>
-          <a href={card.imageUrl} target="_blank">
+          <a href={card.imageUrl} target="_blank" rel="noopener noreferrer">
             <img src={card.imageUrl} alt={card.name} />
           </a>
           <div className={styles.dataContainer}>
