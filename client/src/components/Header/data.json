@@ -12,16 +12,10 @@
       "routeName": "examples",
       "active": false,
       "path": "/examples",
-      "text": "Examples",
+      "text": "Examples / About",
       "id": "examples-link"
     },
-    {
-      "routeName": "skills",
-      "active": false,
-      "path": "/skills",
-      "text": "Skills",
-      "id": "skills-link"
-    },
+
     {
       "routeName": "contact",
       "active": false,
@@ -39,5 +33,12 @@
     "fab fa-sass",
     "fab fa-node",
     "fab fa-npm"
-  ]
+  ],
+  "outOfOrder": {
+    "routeName": "skills",
+    "active": false,
+    "path": "/skills",
+    "text": "Skills",
+    "id": "skills-link"
+  }
 }

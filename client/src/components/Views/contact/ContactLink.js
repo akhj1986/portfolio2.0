@@ -1,6 +1,6 @@
-import React from "react";
-import cn from "classnames";
-import styles from "./contactLink.module.scss";
+import React from "react"
+import cn from "classnames"
+import styles from "./contactLink.module.scss"
 
 const ContactLink = props => {
   return (
@@ -13,7 +13,7 @@ const ContactLink = props => {
         <i className={props.iClass} /> {props.text}
       </a>
     </span>
-  );
-};
+  )
+}
 
-export default ContactLink;
+export default ContactLink

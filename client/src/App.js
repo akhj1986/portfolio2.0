@@ -1,9 +1,9 @@
-import React from "react";
-import { Switch, BrowserRouter, Route } from "react-router-dom";
+import React from "react"
+import { Switch, BrowserRouter, Route } from "react-router-dom"
 
-import SpaceBlocks from "./components/Projects/SpaceBlocks/index.js";
-import MTGSearch from "./components/Projects/MTGSearch";
-import Wrapper from "./components";
+import SpaceBlocks from "./components/Projects/SpaceBlocks/index.js"
+import MTGSearch from "./components/Projects/MTGSearch"
+import Wrapper from "./components"
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
         </Switch>
       </div>
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default App;
+export default App

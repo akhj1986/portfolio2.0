@@ -1,6 +1,6 @@
-import React from "react";
-import cn from "classnames";
-import styles from "./ColorChoice.module.scss";
+import React from "react"
+import cn from "classnames"
+import styles from "./ColorChoice.module.scss"
 
 const ColorChoice = props => {
   return (
@@ -21,7 +21,7 @@ const ColorChoice = props => {
             />
             {c.identity}
           </label>
-        );
+        )
       })}
       <label className={styles.colorlessRadio}>
         <input
@@ -34,7 +34,7 @@ const ColorChoice = props => {
         Colorless
       </label>
     </div>
-  );
-};
+  )
+}
 
-export default ColorChoice;
+export default ColorChoice

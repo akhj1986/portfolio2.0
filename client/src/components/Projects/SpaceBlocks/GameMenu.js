@@ -1,6 +1,6 @@
-import React from "react";
-import MenuLinks from "./MenuLinks";
-import styles from "./gameMenu.module.scss";
+import React from "react"
+import MenuLinks from "./MenuLinks"
+import styles from "./gameMenu.module.scss"
 
 const GameMenu = () => {
   return (
@@ -9,7 +9,7 @@ const GameMenu = () => {
       <MenuLinks />
       <h2>A game by Alex Harris-Jedamski</h2>
     </div>
-  );
-};
+  )
+}
 
-export default GameMenu;
+export default GameMenu

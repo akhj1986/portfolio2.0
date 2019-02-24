@@ -1,0 +1,34 @@
+@import "../../../scss/mixins.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.linksContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
+}
+
+.header {
+  margin: 0 0 30px;
+}
+
+.codeButton {
+  border: none;
+  text-align: left;
+  background: white;
+  padding: 0;
+  margin: 0 0 15px;
+  font-family: "Scada", sans-serif;
+  letter-spacing: 2px;
+  color: #555;
+  font-weight: bold;
+  color: $purpleText;
+}
+
+.codeButton:hover {
+  font-weight: bold;
+  color: black;
+}

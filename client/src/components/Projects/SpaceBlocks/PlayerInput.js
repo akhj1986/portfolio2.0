@@ -1,35 +1,35 @@
-import React, { Component } from "react";
-import { Redirect, Link } from "react-router-dom";
-import Conditional from "./Conditional";
-import styles from "./playerInput.module.scss";
-import { connect } from "react-redux";
-import { postScore } from "../../../store/actions/scoreLog";
+import React, { Component } from "react"
+import { Redirect, Link } from "react-router-dom"
+import Conditional from "./Conditional"
+import styles from "./playerInput.module.scss"
+import { connect } from "react-redux"
+import { postScore } from "../../../store/actions/scoreLog"
 
 class PlayerInput extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       playerName: ""
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange(event) {
-    const { name, value } = event.target;
+    const { name, value } = event.target
     this.setState({
       [name]: value
-    });
+    })
   }
 
   handleSubmit(event) {
-    event.preventDefault();
-    this.props.postScore(this.state.playerName, this.props.score);
+    event.preventDefault()
+    this.props.postScore(this.state.playerName, this.props.score)
   }
 
   render() {
     if (this.props.toTable === true) {
-      return <Redirect exact to="/spaceblocks/scores" />;
+      return <Redirect exact to="/spaceblocks/scores" />
     }
     return (
       <div className={styles.container}>
@@ -57,7 +57,7 @@ class PlayerInput extends Component {
           </div>
         ) : null}
       </div>
-    );
+    )
   }
 }
 
@@ -67,16 +67,16 @@ const mapStateToProps = state => {
     toTable: state.spaceBlocks.toTable,
     submitting: state.spaceBlocks.submitting,
     errRender: state.spaceBlocks.errRender
-  };
-};
+  }
+}
 
 const mapDispatchToProps = dispatch => {
   return {
     postScore: (playerName, score) => dispatch(postScore(playerName, score))
-  };
-};
+  }
+}
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PlayerInput);
+)(PlayerInput)

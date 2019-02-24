@@ -1,60 +1,72 @@
-.container {
-  h1 {
-    display: flex;
-    padding: 0 40px;
-    margin: 0 0 30px;
-  }
-}
+@import "../../../scss/mixins.scss";
 
-.paragraph {
+.container {
   padding: 0 40px;
   margin: 0 0 20px;
   p {
     margin: 0 0 10px 0;
   }
 }
+.header {
+  margin: 0 0 30px;
+}
+
+.workPrompt {
+  font-weight: bold;
+}
+
+.readMore {
+  border: none;
+  background: white;
+  padding: 0;
+  margin: 0 0 20px;
+  font-family: "Scada", sans-serif;
+  letter-spacing: 2px;
+  color: #555;
+  font-weight: bold;
+  color: $purpleText;
+}
+
+.readMore:hover {
+  font-weight: bold;
+  color: black;
+}
 
 @media screen and (min-width: 490px) {
-  .paragraph {
+  .container {
     margin: 0 0 30px;
+  }
+  .readMore {
+    margin: 0 0 40px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    h1 {
-      padding: 0 80px;
-      margin: 0 0 45px;
-    }
-  }
-  .paragraph {
     padding: 0 80px;
     margin: 0 0 40px;
+  }
+  .header {
+    margin: 0 0 45px;
   }
 }
 
 @media screen and (min-width: 900px) {
   .container {
-    h1 {
-      padding: 0;
-    }
-  }
-  .paragraph {
     padding: 0;
     margin: 0 auto 20px;
   }
 }
 
 @media screen and (min-width: 1080px) {
-  .paragraph {
+  .container {
     max-width: 1170px;
-    margin: 0 auto 20;
     justify-content: flex-start;
   }
 }
 
 @media screen and (min-width: 1600px) {
-  .paragraph {
+  .container {
     margin: 0 0 50px;
   }
 }

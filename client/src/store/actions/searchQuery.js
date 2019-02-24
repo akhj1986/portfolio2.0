@@ -1,21 +1,21 @@
-const mtg = require("mtgsdk");
+const mtg = require("mtgsdk")
 
 const queryStarted = () => {
-  console.log("query started");
+  console.log("query started")
   return {
     type: "QUERY_STARTED"
-  };
-};
+  }
+}
 
 const addQueryResult = res => {
-  console.log("query success", res);
+  console.log("query success", res)
   return {
     type: "ADD_QUERY_RESULTS",
     payload: {
       ...res
     }
-  };
-};
+  }
+}
 
 const queryError = err => {
   return {
@@ -23,13 +23,13 @@ const queryError = err => {
     payload: {
       err
     }
-  };
-};
+  }
+}
 
 export const searchQuery = query => {
   return dispatch => {
-    dispatch(queryStarted());
-    const colors = query.colors.filter(color => color !== "noOtherColor");
+    dispatch(queryStarted())
+    const colors = query.colors.filter(color => color !== "noOtherColor")
     mtg.card
       .where({
         name: `${query.cardName}`,
@@ -40,7 +40,7 @@ export const searchQuery = query => {
         cmc: `${query.cmc}`
       })
       .then(res => {
-        const cb = o => o.name;
+        const cb = o => o.name
         return {
           results: [
             ...res
@@ -49,54 +49,54 @@ export const searchQuery = query => {
                   card.colors.every(c => colors.includes(c)) === false &&
                   query.colors.includes("noOtherColor")
                 ) {
-                  return null;
+                  return null
                 } else {
-                  return card;
+                  return card
                 }
               })
               .sort((a, b) => {
-                let A = a.name.toUpperCase();
-                let B = b.name.toUpperCase();
+                const A = a.name.toUpperCase()
+                const B = b.name.toUpperCase()
                 if (A < B) {
-                  return -1;
+                  return -1
                 }
                 if (A > B) {
-                  return 1;
+                  return 1
                 } else {
-                  return 0;
+                  return 0
                 }
               })
               .filter(card => {
                 if (query.colorless === true && card.colors.length > 0) {
-                  return null;
+                  return null
                 } else {
-                  return card;
+                  return card
                 }
               })
               .filter(card => {
                 if (card.imageUrl !== undefined) {
-                  return card;
+                  return card
                 } else {
-                  return null;
+                  return null
                 }
               })
               .reduce((map, item) => {
-                const key = cb(item);
+                const key = cb(item)
 
-                map.has(key) || map.set(key, item);
+                map.has(key) || map.set(key, item)
 
-                return map;
+                return map
               }, new Map())
               .values()
           ]
-        };
+        }
       })
       .then(res => {
-        dispatch(addQueryResult(res));
+        dispatch(addQueryResult(res))
       })
       .catch(err => {
-        console.log("err", err);
-        dispatch(queryError(err));
-      });
-  };
-};
+        console.log("err", err)
+        dispatch(queryError(err))
+      })
+  }
+}

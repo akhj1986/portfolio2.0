@@ -1,17 +1,17 @@
-import React from "react";
-import Paragraph from "./Paragraph";
-import styles from "./examples.module.scss";
+import React from "react"
+import Content from "./Content"
+import styles from "./examples.module.scss"
 
-const Portfolio = () => {
+const Examples = () => {
   return (
     <div id="examples">
       <div className={styles.container}>
         <div>
-          <Paragraph />
+          <Content />
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Examples

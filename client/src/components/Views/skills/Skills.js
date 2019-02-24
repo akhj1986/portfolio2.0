@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./skills.module.scss";
+import React from "react"
+import styles from "./skills.module.scss"
 
 const Skills = () => {
   return (
@@ -36,7 +36,7 @@ const Skills = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

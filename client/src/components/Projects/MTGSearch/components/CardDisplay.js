@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./CardDisplay.module.scss";
-import CardDetails from "./display/CardDetails";
+import React from "react"
+import { Link } from "react-router-dom"
+import styles from "./CardDisplay.module.scss"
+import CardDetails from "./display/CardDetails"
 
 const ZoomPage = props => {
   return (
@@ -11,7 +11,7 @@ const ZoomPage = props => {
         Back to search
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default ZoomPage;
+export default ZoomPage

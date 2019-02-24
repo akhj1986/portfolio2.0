@@ -4,7 +4,7 @@ const initState = {
   submitting: false,
   toTable: false,
   errRender: false
-};
+}
 
 const scoreReducer = (state = initState, action) => {
   switch (action.type) {
@@ -12,12 +12,12 @@ const scoreReducer = (state = initState, action) => {
       return {
         ...state,
         score: action.score
-      };
+      }
     case "POST_STARTED":
       return {
         ...state,
         submitting: true
-      };
+      }
     case "POST_SUCCESS":
       return {
         ...state,
@@ -25,17 +25,17 @@ const scoreReducer = (state = initState, action) => {
         score: 0,
         submitting: false,
         toTable: true
-      };
+      }
     case "POST_ERROR":
       return {
         ...state,
         playerName: "",
         submitting: false,
         errRender: true
-      };
+      }
     default:
   }
-  return state;
-};
+  return state
+}
 
-export default scoreReducer;
+export default scoreReducer

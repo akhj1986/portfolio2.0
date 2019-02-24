@@ -1,3 +1,10 @@
+@import "../../../scss/mixins.scss";
+
+.header {
+  margin: 0 0 30px;
+  align-self: flex-start;
+}
+
 .examplesLinks {
   display: flex;
   flex-direction: column;
@@ -7,12 +14,34 @@
 .projectLink {
   margin: 0 0 40px;
   img {
-    width: 150px;
+    width: 100%;
     height: auto;
+    margin: 0 0 8px;
   }
   p {
     font-size: 12px;
   }
+}
+.linkHeader {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.codeButton {
+  border: none;
+  background: white;
+  padding: 0;
+  margin: 0 0 20px;
+  font-family: "Scada", sans-serif;
+  letter-spacing: 2px;
+  color: #555;
+  font-weight: bold;
+  color: $purpleText;
+}
+
+.codeButton:hover {
+  font-weight: bold;
+  color: black;
 }
 
 .repositoryLink {

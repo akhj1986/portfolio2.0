@@ -1,27 +1,27 @@
-import React, { Component } from "react";
-import NavLink from "./NavLink";
-import data from "../Header/data.json";
-import styles from "./navBar.module.scss";
+import React, { Component } from "react"
+import NavLink from "./NavLink"
+import data from "../Header/data.json"
+import styles from "./navBar.module.scss"
 
 class NavBar extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       routes: data.routes
-    };
-    this.handleClick = this.handleClick.bind(this);
+    }
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick(name) {
     this.setState(prevState => {
       const updatedState = prevState.routes.map(route => {
-        route.active = route.routeName === name ? true : false;
-        return route;
-      });
+        route.active = route.routeName === name ? true : false
+        return route
+      })
       return {
         routes: updatedState
-      };
-    });
+      }
+    })
   }
 
   render() {
@@ -35,7 +35,7 @@ class NavBar extends Component {
         id={route.routeName}
         handleClick={this.handleClick}
       />
-    ));
+    ))
 
     return (
       <div className={styles.navBar}>
@@ -43,8 +43,8 @@ class NavBar extends Component {
           {routes}
         </ul>
       </div>
-    );
+    )
   }
 }
 
-export default NavBar;
+export default NavBar

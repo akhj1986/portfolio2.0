@@ -1,43 +1,43 @@
-import React, { Component } from "react";
-import data from "./textArray.json";
-import styles from "./phrases.module.scss";
-import cn from "classnames";
+import React, { Component } from "react"
+import data from "./textArray.json"
+import styles from "./phrases.module.scss"
+import cn from "classnames"
 
 class Phrases extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       textArray: data.texts,
       displayText: "Web development using the latest technologies...",
       index: 0,
-      displayClass: "small-text",
+      displayClass: "smallText",
       interval: ""
-    };
-    this.textRotation = this.textRotation.bind(this);
+    }
+    this.textRotation = this.textRotation.bind(this)
   }
 
   componentDidMount() {
-    this.setState({ interval: setInterval(this.textRotation, 3200) });
+    this.setState({ interval: setInterval(this.textRotation, 3200) })
   }
 
   componentWillUnmount() {
-    clearInterval(this.state.interval);
+    clearInterval(this.state.interval)
   }
 
   textRotation() {
-    let i = this.state.index;
-    const t = this.state.textArray;
+    let i = this.state.index
+    const t = this.state.textArray
     if (i < t.length - 1) {
-      i++;
+      i++
     } else {
-      i = 0;
+      i = 0
     }
-    const display = t[i];
+    const display = t[i]
     this.setState({
       index: i,
       displayClass: display.className,
       displayText: display.text
-    });
+    })
   }
 
   render() {
@@ -49,8 +49,8 @@ class Phrases extends Component {
           })}
         >{`${this.state.displayText}`}</h1>
       </div>
-    );
+    )
   }
 }
 
-export default Phrases;
+export default Phrases

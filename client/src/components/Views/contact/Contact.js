@@ -1,6 +1,6 @@
-import React from "react";
-import ContactList from "./ContactList";
-import styles from "./contact.module.scss";
+import React from "react"
+import ContactList from "./ContactList"
+import styles from "./contact.module.scss"
 
 const Contact = () => {
   return (
@@ -12,7 +12,7 @@ const Contact = () => {
         <ContactList />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

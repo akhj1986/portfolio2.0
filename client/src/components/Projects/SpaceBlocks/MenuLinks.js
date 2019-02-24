@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import styles from "./menuLinks.module.scss";
+import React, { Component } from "react"
+import { Link } from "react-router-dom"
+import styles from "./menuLinks.module.scss"
 
 class MenuLinks extends Component {
   handleExit() {
-    window.close();
+    window.close()
   }
 
   render() {
@@ -25,8 +25,8 @@ class MenuLinks extends Component {
           Exit Game
         </button>
       </div>
-    );
+    )
   }
 }
 
-export default MenuLinks;
+export default MenuLinks

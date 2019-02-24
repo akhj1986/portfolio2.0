@@ -1,6 +1,6 @@
-import React from "react";
-import FooterLink from "./Link";
-import styles from "./index.module.scss";
+import React from "react"
+import FooterLink from "./Link"
+import styles from "./index.module.scss"
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
         <FooterLink />
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

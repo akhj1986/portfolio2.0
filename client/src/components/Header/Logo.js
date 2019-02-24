@@ -1,8 +1,8 @@
-import React from "react";
-import logo from "../../img/logo2.png";
-import KnownScripts from "./KnownScripts";
-import { Link } from "react-router-dom";
-import styles from "./logo.module.scss";
+import React from "react"
+import logo from "../../img/logo2.png"
+import KnownScripts from "./KnownScripts"
+import { Link } from "react-router-dom"
+import styles from "./logo.module.scss"
 
 const Logo = () => {
   return (
@@ -17,7 +17,7 @@ const Logo = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

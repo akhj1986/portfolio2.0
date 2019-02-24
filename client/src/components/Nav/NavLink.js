@@ -1,7 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import styles from "./navLink.module.scss";
-import cn from "classnames";
+import React from "react"
+import { NavLink } from "react-router-dom"
+import styles from "./navLink.module.scss"
+import cn from "classnames"
 
 const NavLinks = props => {
   return (
@@ -20,7 +20,7 @@ const NavLinks = props => {
         {props.text}
       </NavLink>
     </li>
-  );
-};
+  )
+}
 
-export default NavLinks;
+export default NavLinks

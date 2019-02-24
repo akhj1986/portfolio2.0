@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./photoNav.module.scss";
+import React from "react"
+import { Link } from "react-router-dom"
+import styles from "./photoNav.module.scss"
 
-import smallHeadShot from "../../../img/headshot3.jpg";
+import smallHeadShot from "../../../img/headshot3.jpg"
 
 const PhotoNav = () => {
   return (
@@ -16,7 +16,7 @@ const PhotoNav = () => {
         </Link>
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default PhotoNav;
+export default PhotoNav

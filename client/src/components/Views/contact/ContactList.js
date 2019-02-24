@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import ContactLink from "./ContactLink";
-import data from "./data.json";
-import pdf from "./CVaHarrisJan2019.pdf";
-import styles from "./contactList.module.scss";
+import React, { Component } from "react"
+import ContactLink from "./ContactLink"
+import data from "./data.json"
+import pdf from "./CVaHarrisJan2019.pdf"
+import styles from "./contactList.module.scss"
 
 class ContactList extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       contacts: data.contactDetails
-    };
+    }
   }
 
   render() {
@@ -23,9 +23,9 @@ class ContactList extends Component {
         target={contact.target}
         text={contact.text}
       />
-    ));
-    return <div className={styles.contacts}>{contactComponents}</div>;
+    ))
+    return <div className={styles.contacts}>{contactComponents}</div>
   }
 }
 
-export default ContactList;
+export default ContactList

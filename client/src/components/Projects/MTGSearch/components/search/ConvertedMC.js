@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./ConvertedMC.module.scss";
+import React from "react"
+import styles from "./ConvertedMC.module.scss"
 
 const ConvertedMC = props => {
   return (
@@ -13,13 +13,13 @@ const ConvertedMC = props => {
                 <option value={cmc} key={cmc}>
                   {cmc}
                 </option>
-              );
+              )
             }
           )}
         </select>
       </label>
     </div>
-  );
-};
+  )
+}
 
-export default ConvertedMC;
+export default ConvertedMC

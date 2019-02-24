@@ -1,32 +1,32 @@
-import React, { Component } from "react";
-import data from "./data.json";
-import cn from "classnames";
-import styles from "./knownScripts.module.scss";
+import React, { Component } from "react"
+import data from "./data.json"
+import cn from "classnames"
+import styles from "./knownScripts.module.scss"
 
 class KnownScripts extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       index: 0,
       codeLang: data.codeLang,
       displayClass: data.codeLang[0]
-    };
-    this.handleClick = this.handleClick.bind(this);
+    }
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick() {
-    const l = this.state.codeLang;
-    let i = this.state.index;
+    const l = this.state.codeLang
+    let i = this.state.index
     if (i < l.length - 1) {
-      i++;
+      i++
     } else {
-      i = 0;
+      i = 0
     }
-    const selectL = l[i];
+    const selectL = l[i]
     this.setState({
       index: i,
       displayClass: selectL
-    });
+    })
   }
 
   render() {
@@ -41,8 +41,8 @@ class KnownScripts extends Component {
           onClick={this.handleClick}
         />
       </div>
-    );
+    )
   }
 }
 
-export default KnownScripts;
+export default KnownScripts

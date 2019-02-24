@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import MediaQuery from "react-responsive";
-import styles from "./link.module.scss";
+import React from "react"
+import { Link } from "react-router-dom"
+import MediaQuery from "react-responsive"
+import styles from "./link.module.scss"
 
 const FooterLink = () => {
   return (
@@ -14,13 +14,13 @@ const FooterLink = () => {
                 Contact
               </Link>
             </li>
-          );
+          )
         } else {
-          return null;
+          return null
         }
       }}
     </MediaQuery>
-  );
-};
+  )
+}
 
-export default FooterLink;
+export default FooterLink

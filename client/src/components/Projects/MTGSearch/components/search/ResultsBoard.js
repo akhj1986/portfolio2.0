@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./ResultsBoard.module.scss";
+import React from "react"
+import { Link } from "react-router-dom"
+import styles from "./ResultsBoard.module.scss"
 
 const ResultsBoard = props => {
   return (
@@ -14,7 +14,7 @@ const ResultsBoard = props => {
       </div>
       <div className={styles.printings}>
         {props.srcData.printings.map(set => {
-          return <p key={set}>{set}</p>;
+          return <p key={set}>{set}</p>
         })}
       </div>
       <h3>{props.srcData.flavor}</h3>
@@ -27,7 +27,7 @@ const ResultsBoard = props => {
         />
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default ResultsBoard;
+export default ResultsBoard

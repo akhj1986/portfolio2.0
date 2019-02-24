@@ -1,20 +1,20 @@
-import React, { Component } from "react";
-import TableEntry from "./TableEntry";
-import { Link } from "react-router-dom";
-import Conditional from "./Conditional";
-import styles from "./highScoreTable.module.scss";
+import React, { Component } from "react"
+import TableEntry from "./TableEntry"
+import { Link } from "react-router-dom"
+import Conditional from "./Conditional"
+import styles from "./highScoreTable.module.scss"
 
-const axios = require("axios");
+const axios = require("axios")
 
 class HighScoreTable extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       scores: [],
       isLoading: true,
       error: false
-    };
-    this.loaded = this.loaded.bind(this);
+    }
+    this.loaded = this.loaded.bind(this)
   }
 
   componentDidMount() {
@@ -23,28 +23,28 @@ class HighScoreTable extends Component {
       .then(res => {
         this.setState({
           scores: res.data
-        });
+        })
       })
       .then(() => {
-        this.loaded();
+        this.loaded()
       })
       .catch(err => {
-        console.log("Error:", err);
+        console.log("Error:", err)
         this.setState({
           error: true,
           isLoading: false
-        });
-      });
+        })
+      })
   }
 
   loaded() {
     this.setState({
       isLoading: false
-    });
+    })
   }
 
   handleClick() {
-    window.close();
+    window.close()
   }
 
   render() {
@@ -57,8 +57,8 @@ class HighScoreTable extends Component {
             .sort((a, b) => b.score - a.score)
             .slice(0, 10)
             .map((info, i) => {
-              let classID = "";
-              i % 2 === 0 ? (classID = "even") : (classID = "odd");
+              let classID = ""
+              i % 2 === 0 ? (classID = "even") : (classID = "odd")
               return (
                 <TableEntry
                   key={info._id}
@@ -67,7 +67,7 @@ class HighScoreTable extends Component {
                   score={info.score}
                   date={info.create_date}
                 />
-              );
+              )
             })}
         </ul>
         {this.state.error ? (
@@ -80,8 +80,8 @@ class HighScoreTable extends Component {
         </Link>
         <button onClick={this.handleClick}>Exit Game</button>
       </div>
-    );
+    )
   }
 }
 
-export default HighScoreTable;
+export default HighScoreTable

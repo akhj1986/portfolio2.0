@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./RarityChoice.module.scss";
+import React from "react"
+import styles from "./RarityChoice.module.scss"
 
 const RarityChoice = props => {
   return (
@@ -17,10 +17,10 @@ const RarityChoice = props => {
             />
             {c.identity}
           </label>
-        );
+        )
       })}
     </div>
-  );
-};
+  )
+}
 
-export default RarityChoice;
+export default RarityChoice

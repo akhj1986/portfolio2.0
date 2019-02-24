@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import styles from "./tableEntry.module.scss";
-import cn from "classnames";
+import React, { Component } from "react"
+import styles from "./tableEntry.module.scss"
+import cn from "classnames"
 
-const moment = require("moment");
+const moment = require("moment")
 
 class TableEntry extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       date: moment(new Date(this.props.date)).format("ll")
-    };
+    }
   }
   render() {
     return (
@@ -22,8 +22,8 @@ class TableEntry extends Component {
         <span className={styles.playerScore}>{this.props.score}</span>
         <span className={styles.inputDate}>{this.state.date}</span>
       </li>
-    );
+    )
   }
 }
 
-export default TableEntry;
+export default TableEntry

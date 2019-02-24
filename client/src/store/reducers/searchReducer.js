@@ -1,6 +1,6 @@
 const initState = {
   results: []
-};
+}
 
 const searchReducer = (state = initState, action) => {
   switch (action.type) {
@@ -8,23 +8,23 @@ const searchReducer = (state = initState, action) => {
       return {
         ...state,
         loading: true
-      };
+      }
     case "ADD_QUERY_RESULTS":
       return {
         ...state,
         loading: false,
         results: action.payload.results
-      };
+      }
     case "QUERY_ERROR":
       return {
         ...state,
         loading: false,
         error: action.payload.error
-      };
+      }
 
     default:
   }
-  return state;
-};
+  return state
+}
 
-export default searchReducer;
+export default searchReducer

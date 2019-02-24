@@ -1,9 +1,9 @@
-import React from "react";
-import styles from "./index.module.scss";
+import React from "react"
+import styles from "./index.module.scss"
 
-import Header from "./Header/";
-import MainContent from "./Views/";
-import Footer from "./Footer/";
+import Header from "./Header/"
+import MainContent from "./Views/"
+import Footer from "./Footer/"
 
 const Wrapper = () => {
   return (
@@ -12,7 +12,7 @@ const Wrapper = () => {
       <MainContent />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Wrapper;
+export default Wrapper

@@ -1,9 +1,9 @@
-import React from "react";
-import { connect } from "react-redux";
-import styles from "./CardDetails.module.scss";
+import React from "react"
+import { connect } from "react-redux"
+import styles from "./CardDetails.module.scss"
 
 const CardDetails = props => {
-  const card = props.card;
+  const card = props.card
   return (
     <div className={styles.container}>
       {card ? (
@@ -28,7 +28,7 @@ const CardDetails = props => {
                   <span key={set} className={styles.printings}>
                     {set}
                   </span>
-                );
+                )
               })}
             </p>
             <span>Artist:</span> <p>{card.artist}</p>
@@ -39,7 +39,7 @@ const CardDetails = props => {
                   <span key={legal.format} className={styles.legalities}>
                     - {legal.format} -
                   </span>
-                );
+                )
               })}
             </p>
           </div>
@@ -51,14 +51,14 @@ const CardDetails = props => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
 const mapStateToProps = (state, ownProps) => {
-  const card = state.search.results.filter(card => card.id === ownProps.id)[0];
+  const card = state.search.results.filter(card => card.id === ownProps.id)[0]
   return {
     card
-  };
-};
+  }
+}
 
-export default connect(mapStateToProps)(CardDetails);
+export default connect(mapStateToProps)(CardDetails)

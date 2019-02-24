@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./SubTypes.module.scss";
+import React from "react"
+import styles from "./SubTypes.module.scss"
 
 const SubTypes = props => {
   return (
@@ -11,12 +11,12 @@ const SubTypes = props => {
           {props.subTypeCard
             .sort((a, b) => {
               if (a < b) {
-                return -1;
+                return -1
               }
               if (a > b) {
-                return +1;
+                return +1
               } else {
-                return 0;
+                return 0
               }
             })
             .map(subType => {
@@ -24,12 +24,12 @@ const SubTypes = props => {
                 <option value={subType} key={subType}>
                   {subType}
                 </option>
-              );
+              )
             })}
         </select>
       </label>
     </div>
-  );
-};
+  )
+}
 
-export default SubTypes;
+export default SubTypes

@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./Types.module.scss";
+import React from "react"
+import styles from "./Types.module.scss"
 
 const Types = props => {
   return (
@@ -13,12 +13,12 @@ const Types = props => {
               <option value={type.value} key={type.identity}>
                 {type.identity}
               </option>
-            );
+            )
           })}
         </select>
       </label>
     </div>
-  );
-};
+  )
+}
 
-export default Types;
+export default Types

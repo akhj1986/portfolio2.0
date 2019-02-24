@@ -1,9 +1,9 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import styles from "./index.module.scss";
+import React from "react"
+import { Route, Switch } from "react-router-dom"
+import styles from "./index.module.scss"
 
-import Search from "./components/Search";
-import CardDisplay from "./components/CardDisplay";
+import Search from "./components/Search"
+import CardDisplay from "./components/CardDisplay"
 
 const MTGSearch = () => {
   return (
@@ -13,7 +13,7 @@ const MTGSearch = () => {
         <Route path="/mtgsearch/:card_id" component={CardDisplay} />
       </Switch>
     </div>
-  );
-};
+  )
+}
 
-export default MTGSearch;
+export default MTGSearch

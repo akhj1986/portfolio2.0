@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./controls.module.scss";
+import React from "react"
+import { Link } from "react-router-dom"
+import styles from "./controls.module.scss"
 
 const GameMenu = () => {
   return (
@@ -34,7 +34,7 @@ const GameMenu = () => {
         <button>Back to menu</button>
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default GameMenu;
+export default GameMenu

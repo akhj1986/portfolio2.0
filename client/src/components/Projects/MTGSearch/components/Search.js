@@ -1,20 +1,18 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-
-import styles from "./Search.module.scss";
-import { searchQuery } from "../../../../store/actions/searchQuery";
-import searchTerms from "./search/searchTerms.json";
-
-import ResultsBoard from "./search/ResultsBoard";
-import ColorChoice from "./search/ColorChoice";
-import RarityChoice from "./search/RarityChoice";
-import Types from "./search/Types";
-import SubTypes from "./search/SubTypes";
-import ConvertedMC from "./search/ConvertedMC";
+import React, { Component } from "react"
+import { connect } from "react-redux"
+import styles from "./Search.module.scss"
+import { searchQuery } from "../../../../store/actions/searchQuery"
+import searchTerms from "./search/searchTerms.json"
+import ResultsBoard from "./search/ResultsBoard"
+import ColorChoice from "./search/ColorChoice"
+import RarityChoice from "./search/RarityChoice"
+import Types from "./search/Types"
+import SubTypes from "./search/SubTypes"
+import ConvertedMC from "./search/ConvertedMC"
 
 class Search extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       cardName: "",
       colors: [],
@@ -30,11 +28,11 @@ class Search extends Component {
       cmc: "",
       advancedSearch: false,
       advancedButtonText: "Advanced Search"
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleRadioChange = this.handleRadioChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleRadioChange = this.handleRadioChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick() {
@@ -46,50 +44,50 @@ class Search extends Component {
           type: "",
           subType: "",
           cmc: ""
-        };
+        }
       } else {
         return {
           advancedSearch: true,
           advancedButtonText: "Basic Search"
-        };
+        }
       }
-    });
+    })
   }
 
   handleChange(event) {
-    const { name, value, type } = event.target;
-    const searchCard = [name] + "Card";
+    const { name, value, type } = event.target
+    const searchCard = [name] + "Card"
     if (type === "checkbox") {
       this.setState(prevState => {
-        let arr = prevState[name];
+        let arr = prevState[name]
         if (arr.includes(value)) {
-          arr = arr.filter(item => item !== value);
+          arr = arr.filter(item => item !== value)
         } else {
-          arr.push(value);
+          arr.push(value)
         }
         return {
           [name]: arr,
           colorless: name === "colors" ? false : prevState.colorless,
           [searchCard]: prevState[searchCard].map(card => {
             if (card.value !== value) {
-              return card;
+              return card
             }
             return {
               ...card,
               checked: !card.checked
-            };
+            }
           })
-        };
-      });
+        }
+      })
     } else {
       this.setState({
         [name]: value
-      });
+      })
     }
   }
 
   handleRadioChange(event) {
-    const { name } = event.target;
+    const { name } = event.target
     this.setState(prevState => {
       return {
         [name]: !prevState[name],
@@ -98,18 +96,18 @@ class Search extends Component {
           return {
             ...card,
             checked: false
-          };
+          }
         })
-      };
-    });
+      }
+    })
   }
 
   handleSubmit(event) {
-    event.preventDefault();
-    this.props.searchQuery(this.state);
+    event.preventDefault()
+    this.props.searchQuery(this.state)
     this.setState({
       hasSearched: true
-    });
+    })
   }
 
   render() {
@@ -168,11 +166,11 @@ class Search extends Component {
         ) : null}
         <div className={styles.displayBoard}>
           {this.props.results.map(card => {
-            return <ResultsBoard srcData={card} key={card.id} />;
+            return <ResultsBoard srcData={card} key={card.id} />
           })}
         </div>
       </div>
-    );
+    )
   }
 }
 
@@ -180,16 +178,16 @@ const mapStateToProps = state => {
   return {
     results: state.search.results,
     loading: state.search.loading
-  };
-};
+  }
+}
 
 const mapDispatchToProps = dispatch => {
   return {
     searchQuery: results => dispatch(searchQuery(results))
-  };
-};
+  }
+}
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Search);
+)(Search)

@@ -1,12 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import styles from "./index.module.scss";
+import React from "react"
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import styles from "./index.module.scss"
 
-import SpaceBlocks from "./SpaceBlocks";
-import HighScoreTable from "./HighScoreTable";
-import PlayerInput from "./PlayerInput";
-import GameMenu from "./GameMenu";
-import Controls from "./Controls";
+import SpaceBlocks from "./SpaceBlocks"
+import HighScoreTable from "./HighScoreTable"
+import PlayerInput from "./PlayerInput"
+import GameMenu from "./GameMenu"
+import Controls from "./Controls"
 
 const Game = () => {
   return (
@@ -17,7 +17,7 @@ const Game = () => {
       <Route path="/spaceblocks/input" component={PlayerInput} />
       <Route path="/spaceblocks/controls" component={Controls} />
     </div>
-  );
-};
+  )
+}
 
-export default Game;
+export default Game
