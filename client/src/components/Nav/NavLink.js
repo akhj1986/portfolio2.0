@@ -15,7 +15,6 @@ const NavLinks = props => {
         id={props.id}
         exact={props.exact}
         to={props.path}
-        onClick={() => props.handleClick(props.name)}
       >
         {props.text}
       </NavLink>

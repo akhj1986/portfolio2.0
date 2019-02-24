@@ -1,14 +1,11 @@
 @import "../../../scss/mixins.scss";
 
-.header {
-  margin: 0 0 30px;
-  align-self: flex-start;
-}
-
-.examplesLinks {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0;
+  margin: 0 0 20px;
 }
 
 .projectLink {
@@ -54,36 +51,50 @@
   }
 }
 
+@media screen and (min-width: 490px) {
+  .projectLink {
+    p {
+      font-size: 14px;
+    }
+  }
+  .linkHeader {
+    margin: 0 0 5px;
+    font-size: 22px;
+  }
+}
+
 @media screen and (min-width: 768px) {
-  .examplesLinks {
+  .container {
     flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: flex-start;
     margin: 0 0 20px;
-    padding: 0 80px;
   }
   .projectLink {
     margin: 0;
+    width: 270px;
+    p {
+      font-size: 14px;
+    }
     img {
-      width: 120px;
+      width: 270px;
     }
   }
-  .repositoryLink {
-    a {
-      font-size: 100px;
-    }
+  .linkHeader {
+    margin: 0 0 5px;
+    font-size: 20px;
   }
 }
 
 @media screen and (min-width: 900px) {
-  .examplesLinks {
+  .container {
     margin: 30px 0 20px;
     padding: 0;
   }
 }
 
 @media screen and (min-width: 1600px) {
-  .examplesLinks {
+  .container {
     margin: 60px 0 30px;
   }
 }

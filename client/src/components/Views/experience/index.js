@@ -1,6 +1,8 @@
 import React from "react"
 import Content from "./Content"
-import styles from "./examples.module.scss"
+import styles from "./index.module.scss"
+import ExamplesLinks from "./ExamplesLinks"
+import CodeLinks from "./CodeLinks"
 
 const Examples = () => {
   return (
@@ -8,6 +10,9 @@ const Examples = () => {
       <div className={styles.container}>
         <div>
           <Content />
+          <h1 className={styles.header}>Projects</h1>
+          <ExamplesLinks />
+          <CodeLinks />
         </div>
       </div>
     </div>

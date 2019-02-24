@@ -36,8 +36,7 @@ class ExamplesLinks extends Component {
 
   render() {
     return (
-      <div className={styles.examplesLinks}>
-        <h1 className={styles.header}>Projects</h1>
+      <div className={styles.container}>
         {this.state.exampleCode && (
           <CodeExample
             handleClick={this.handleClick}

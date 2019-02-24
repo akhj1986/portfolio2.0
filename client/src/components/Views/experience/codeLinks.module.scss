@@ -3,6 +3,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  margin: 0 0 20px;
 }
 
 .linksContainer {
@@ -31,4 +32,13 @@
 .codeButton:hover {
   font-weight: bold;
   color: black;
+}
+
+@media screen and (min-width: 768px) {
+  .linksContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 30px;
+  }
 }

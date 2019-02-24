@@ -42,7 +42,7 @@ class Phrases extends Component {
 
   render() {
     return (
-      <div className={styles.phrases}>
+      <div className={styles.container}>
         <h1
           className={cn({
             [styles[this.state.displayClass]]: this.state.displayClass

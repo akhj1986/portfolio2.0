@@ -9,19 +9,6 @@ class NavBar extends Component {
     this.state = {
       routes: data.routes
     }
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  handleClick(name) {
-    this.setState(prevState => {
-      const updatedState = prevState.routes.map(route => {
-        route.active = route.routeName === name ? true : false
-        return route
-      })
-      return {
-        routes: updatedState
-      }
-    })
   }
 
   render() {
@@ -33,7 +20,6 @@ class NavBar extends Component {
         exact={route.exact}
         text={route.text}
         id={route.routeName}
-        handleClick={this.handleClick}
       />
     ))
 

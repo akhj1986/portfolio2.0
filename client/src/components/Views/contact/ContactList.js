@@ -24,7 +24,7 @@ class ContactList extends Component {
         text={contact.text}
       />
     ))
-    return <div className={styles.contacts}>{contactComponents}</div>
+    return <div className={styles.container}>{contactComponents}</div>
   }
 }
 

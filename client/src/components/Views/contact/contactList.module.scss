@@ -1,19 +1,19 @@
 @import "../../../scss/mixins.scss";
 
-.contacts {
+.container {
   @include flex-column;
-  padding: 0 40px;
 }
 
 @media screen and (min-width: 768px) {
-  .contacts {
-    margin: 0;
-    padding: 0;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
   }
 }
 
 @media screen and (min-width: 900px) {
-  .contacts {
+  .container {
     @include flex-row;
     padding: 0;
     max-width: 1100px;

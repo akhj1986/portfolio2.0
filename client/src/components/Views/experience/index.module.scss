@@ -5,7 +5,12 @@
   flex: 1 0 auto;
   justify-content: flex-start;
   background: white;
-  padding: 45px 0 0 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 0 30px;
+  align-self: flex-start;
 }
 
 @media screen and (min-width: 900px) {

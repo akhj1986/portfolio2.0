@@ -9,7 +9,7 @@
       "className": "smallText"
     },
     {
-      "text": "React Framework",
+      "text": "ReactJS",
       "className": "largeText"
     },
     {
@@ -17,24 +17,24 @@
       "className": "largeText"
     },
     {
-      "text": "JavaScript ES6",
-      "className": "largeText"
-    },
-    {
-      "text": "HTML5, CSS3",
-      "className": "largeText"
+      "text": "ES6, HTML5, CSS3",
+      "className": "mediumText"
     },
 
     {
-      "text": "...and responsive, mobile-first design...",
+      "text": "And responsive, mobile-first design...",
       "className": "smallText"
     },
     {
-      "text": "...and responsive, mobile-first design...",
+      "text": "And responsive, mobile-first design...",
       "className": "smallText"
     },
     {
       "text": "Flexbox",
+      "className": "largeText"
+    },
+    {
+      "text": "CSS Grid",
       "className": "largeText"
     },
     {

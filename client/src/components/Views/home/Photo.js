@@ -4,8 +4,12 @@ import styles from "./photo.module.scss"
 
 const Photo = () => {
   return (
-    <div className={styles.headShot}>
-      <img src={smallHeadShot} alt="problem loading: headshot" />
+    <div className={styles.container}>
+      <img
+        className={styles.headShot}
+        src={smallHeadShot}
+        alt="problem loading: headshot"
+      />
     </div>
   )
 }
