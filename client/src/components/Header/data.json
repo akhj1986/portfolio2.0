@@ -1,27 +1,24 @@
 {
   "routes": [
     {
-      "routeName": "home",
+      "routeName": "projects",
       "active": true,
       "path": "/",
       "exact": true,
-      "text": "Home",
-      "id": "home-link"
+      "text": "Projects"
     },
     {
-      "routeName": "examples",
+      "routeName": "code",
       "active": false,
       "path": "/examples",
-      "text": "Examples / About",
-      "id": "examples-link"
+      "text": "Code Examples"
     },
 
     {
       "routeName": "contact",
       "active": false,
       "path": "/contact",
-      "text": "Contact",
-      "id": "contact-link"
+      "text": "Contact"
     }
   ],
 

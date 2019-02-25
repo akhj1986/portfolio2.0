@@ -8,20 +8,9 @@
   padding: 0;
 }
 
-.header {
-  margin: 0 0 30px;
-  align-self: flex-start;
-}
-
 @media screen and (min-width: 900px) {
   .container {
     max-width: 1170px;
     margin: auto;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  .container {
-    padding: 60px 0 0;
   }
 }

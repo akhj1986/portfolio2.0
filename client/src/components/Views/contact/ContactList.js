@@ -24,7 +24,11 @@ class ContactList extends Component {
         text={contact.text}
       />
     ))
-    return <div className={styles.container}>{contactComponents}</div>
+    return (
+      <div className={styles.container} id="contact">
+        {contactComponents}{" "}
+      </div>
+    )
   }
 }
 

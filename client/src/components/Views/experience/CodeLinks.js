@@ -34,7 +34,7 @@ class CodeLinks extends Component {
   }
   render() {
     return (
-      <div className={styles.container}>
+      <div className={styles.container} id="code">
         <h1 className={styles.header}>Coding-example snippets</h1>
         <div className={styles.linksContainer}>
           {this.state.exampleCode && (

@@ -1,15 +1,22 @@
 import React from "react"
-import { BrowserRouter as Router, Route } from "react-router-dom"
 import styles from "./index.module.scss"
-
-import Home from "./home"
+import Banner from "./banner"
 import Experience from "./experience"
 import Contact from "./contact/Contact"
+import MediaQuery from "react-responsive"
 
 const MainContent = () => {
   return (
     <div className={styles.container}>
-      <Home />
+      <MediaQuery maxWidth={489}>
+        {matches => {
+          if (matches) {
+            return <Banner />
+          } else {
+            return null
+          }
+        }}
+      </MediaQuery>
       <Experience />
       <Contact />
     </div>

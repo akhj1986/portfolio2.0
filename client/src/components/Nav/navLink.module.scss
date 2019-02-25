@@ -4,31 +4,26 @@
   color: white;
   @include flex-column;
   justify-content: center;
-  height: 30px;
+  height: 33px;
   padding: 0 5px;
+  background: none;
+  border: 0px;
   border-bottom: solid 4px transparent;
-  &.home {
-    width: 48px;
+  font-family: "Scada", sans-serif;
+  letter-spacing: 2px;
+  &.projects {
+    width: 74px;
   }
-  &.examples {
-    width: 160px;
-  }
-  &.skills {
-    width: 49px;
+  &.code {
+    width: 125px;
   }
   &.contact {
-    width: 69px;
-    display: none;
+    width: 68px;
   }
 }
 
 .navItem:hover {
   color: $purpleText;
   font-weight: bold;
-}
-
-@media screen and (min-width: 490px) {
-  .navItem.contact {
-    display: flex;
-  }
+  border-bottom: solid 4px #6e06d6;
 }

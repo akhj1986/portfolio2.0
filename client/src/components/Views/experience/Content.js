@@ -1,6 +1,9 @@
 import React, { Component } from "react"
 import styles from "./content.module.scss"
 import data from "./data.json"
+import MediaQuery from "react-responsive"
+import Photo from "../banner/Photo"
+import Phrases from "../banner/Phrases"
 
 class Content extends Component {
   constructor(props) {
@@ -23,14 +26,35 @@ class Content extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <h1 className={styles.header}>About</h1>
-        <p>{this.state.text.blurb}</p>
-        {this.state.extensionText ? (
+        <MediaQuery maxWidth={489}>
+          {matches => {
+            if (matches) {
+              return null
+            } else {
+              return <Phrases />
+            }
+          }}
+        </MediaQuery>
+        <div className={styles.summary}>
           <div>
-            <p>{this.state.text.extensionOne}</p>
-            <p>{this.state.text.extensionTwo}</p>
+            <p>{this.state.text.blurb}</p>
+            {this.state.extensionText ? (
+              <div className={styles.extensionDiv}>
+                <p>{this.state.text.extensionOne}</p>
+                <p>{this.state.text.extensionTwo}</p>
+              </div>
+            ) : null}
           </div>
-        ) : null}
+          <MediaQuery maxWidth={489}>
+            {matches => {
+              if (matches) {
+                return null
+              } else {
+                return <Photo />
+              }
+            }}
+          </MediaQuery>
+        </div>
         <p className={styles.workPrompt}>
           Please check out examples of my work below.
         </p>

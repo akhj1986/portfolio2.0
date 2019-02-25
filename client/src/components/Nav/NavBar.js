@@ -16,10 +16,8 @@ class NavBar extends Component {
       <NavLink
         key={route.routeName}
         name={route.routeName}
-        path={route.path}
         exact={route.exact}
         text={route.text}
-        id={route.routeName}
       />
     ))
 

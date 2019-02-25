@@ -1,23 +1,29 @@
 import React from "react"
-import { NavLink } from "react-router-dom"
 import styles from "./navLink.module.scss"
 import cn from "classnames"
 
 const NavLinks = props => {
+  const handleClick = e => {
+    const { name } = e.target
+    const nameY = document.getElementById([name]).getBoundingClientRect()
+    const Y = nameY.y
+    console.log("Clicked", Y)
+    window.scrollTo({
+      top: Y,
+      left: 0,
+      behavior: "smooth"
+    })
+  }
+
   return (
     <li>
-      <NavLink
-        activeStyle={{
-          fontWeight: "bold",
-          borderBottom: "solid 4px #6e06d6"
-        }}
-        className={cn(styles.navItem, { [styles[props.id]]: props.id })}
-        id={props.id}
-        exact={props.exact}
-        to={props.path}
+      <button
+        onClick={handleClick}
+        name={props.name}
+        className={cn(styles.navItem, { [styles[props.name]]: props.name })}
       >
         {props.text}
-      </NavLink>
+      </button>
     </li>
   )
 }

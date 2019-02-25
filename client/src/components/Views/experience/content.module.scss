@@ -7,7 +7,8 @@
   }
 }
 .header {
-  margin: 0 0 30px;
+  margin: 0 0 15px;
+  font-size: 20px;
 }
 
 .workPrompt {
@@ -35,8 +36,14 @@
   .container {
     margin: 0 0 30px;
   }
+  .summary {
+    display: flex;
+  }
   .readMore {
     margin: 0 0 40px;
+  }
+  .header {
+    font-size: 25px;
   }
 }
 
@@ -45,7 +52,7 @@
     margin: 0;
   }
   .header {
-    margin: 0 0 45px;
+    margin: 0 0 20px;
   }
 }
 
@@ -60,11 +67,5 @@
   .container {
     max-width: 1170px;
     justify-content: flex-start;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .container {
-    margin: 0 0 50px;
   }
 }

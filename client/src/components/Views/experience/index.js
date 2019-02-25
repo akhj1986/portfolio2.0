@@ -10,7 +10,6 @@ const Examples = () => {
       <div className={styles.container}>
         <div>
           <Content />
-          <h1 className={styles.header}>Projects</h1>
           <ExamplesLinks />
           <CodeLinks />
         </div>

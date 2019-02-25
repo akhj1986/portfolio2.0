@@ -2,7 +2,7 @@
 
 .container {
   h1 {
-    margin: 0 0 45px;
+    margin: 0 0 20px;
   }
 }
 
@@ -11,7 +11,7 @@
     @include flex-column;
     flex: 1 0 auto;
     justify-content: flex-start;
-    padding: 45px 0 0;
+    //padding: 45px 0 0;
     h1 {
       padding: 0;
     }
@@ -24,12 +24,12 @@
 
 @media screen and (min-width: 900px) {
   .container {
-    padding: 75px 0 0;
+    //padding: 75px 0 0;
     max-width: 1170px;
     margin: auto;
     flex: 1 0 auto;
     h1 {
-      margin: 0 0 60px;
+      margin: 0 0 30px;
     }
   }
 }
@@ -38,7 +38,7 @@
   .container {
     max-width: 1170px;
     h1 {
-      margin: 0 0 60px;
+      margin: 0 0 30px;
     }
   }
 }

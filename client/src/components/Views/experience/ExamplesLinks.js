@@ -36,47 +36,40 @@ class ExamplesLinks extends Component {
 
   render() {
     return (
-      <div className={styles.container}>
-        {this.state.exampleCode && (
-          <CodeExample
-            handleClick={this.handleClick}
-            codeText={this.state.codeText}
-            style={this.state.codeLanguage}
-          />
-        )}
-        {this.state.codeExamples.map(link => {
-          return (
-            <div
-              className={styles.projectLink}
-              key={link.name}
-              language={link.language}
-            >
-              <Link to={`/${link.name}`} target="_blank">
-                <img src={`./img/${link.src}`} alt={link.text} />
-              </Link>
-              <h1 className={styles.linkHeader}>{link.heading}</h1>
-              <p>{link.text}</p>
-              <button
-                className={styles.codeButton}
-                onClick={this.handleClick}
-                name={link.name}
-                value={link.codeText}
+      <div id="projects">
+        <h1 className={styles.header}>Projects</h1>
+        <div className={styles.container}>
+          {this.state.exampleCode && (
+            <CodeExample
+              handleClick={this.handleClick}
+              codeText={this.state.codeText}
+              style={this.state.codeLanguage}
+            />
+          )}
+          {this.state.codeExamples.map(link => {
+            return (
+              <div
+                className={styles.projectLink}
+                key={link.name}
+                language={link.language}
               >
-                Example code
-              </button>
-            </div>
-          )
-        })}
-        {/* <div className={styles.repositoryLink}>
-          <a
-            href="https://github.com/akhj1986?tab=repositories"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <i className="fab fa-git" />
-          </a>{" "}
-          <p>My repositories!</p>
-        </div> */}
+                <Link to={`/${link.name}`} target="_blank">
+                  <img src={`./img/${link.src}`} alt={link.text} />
+                </Link>
+                <h1 className={styles.linkHeader}>{link.heading}</h1>
+                <p>{link.text}</p>
+                <button
+                  className={styles.codeButton}
+                  onClick={this.handleClick}
+                  name={link.name}
+                  value={link.codeText}
+                >
+                  Example code
+                </button>
+              </div>
+            )
+          })}
+        </div>
       </div>
     )
   }

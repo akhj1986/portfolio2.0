@@ -89,7 +89,7 @@ export const examples = [
     text:
       "A ReactJS powered Magic: The Gathering card search engine, using Redux and Thunk middleware.",
     language: "javascript",
-    codeText: `//ColorChoice component-------------------------
+    codeText: `// ColorChoice component-------------------------
 
     import React from "react"
     import cn from "classnames"
@@ -187,6 +187,8 @@ export const snippets = [
     heading: "A Redux reducer",
     language: "javascript",
     codeText: `
+    // Reducer for Space Blocks Attack score -------------------
+
     const initState = {
       score: 0,
       playerName: "",
@@ -234,6 +236,9 @@ export const snippets = [
     heading: "A Redux action creator",
     language: "javascript",
     codeText: `
+    // Action creator for posting Space Blocks Attack scores 
+    // (making use of Thunk)-------------------------------
+
     const axios = require("axios")
 
     export const logToStore = score => {
@@ -280,7 +285,9 @@ export const snippets = [
     name: "scoretable",
     heading: "Fetching high scores: a React component",
     language: "javascript",
-    codeText: `
+    codeText: ` 
+    //Fetching Space Blocks Attack! scores, via Express app hosted on Heroku -------------------
+
     import React, { Component } from "react"
     import TableEntry from "./TableEntry"
     import { Link } from "react-router-dom"
@@ -374,6 +381,8 @@ export const snippets = [
     heading: "Builing a NavBar",
     language: "javascript",
     codeText: `
+    //Use of array.prototype.map() to build a NavBar component---------- 
+
     import React, { Component } from "react"
     import NavLink from "./NavLink"
     import data from "../Header/data.json"
@@ -429,7 +438,10 @@ export const snippets = [
     name: "scss",
     heading: "SCSS with CSS Grid",
     language: "scss",
-    codeText: `.imageContainer {
+    codeText: `
+    //An SCSS Module making use of CSS Grid-------------------------
+
+    .imageContainer {
     max-width: 1100px;
     padding: 20px;
     display: grid;
