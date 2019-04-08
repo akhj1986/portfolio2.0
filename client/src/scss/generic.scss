@@ -1,15 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
 @import url("https://fonts.googleapis.com/css?family=Scada:400,700");
 @import url("https://fonts.googleapis.com/css?family=Russo+One");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR|Oxygen|Poppins");
 
 body {
-  //font-family: "Ubuntu Mono", monospace;
-  font-family: "Scada", sans-serif;
+  //font-family: "Poppins", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+
   letter-spacing: 2px;
   color: #555;
   p {
-    line-height: 1.2em;
+    font-family: "Oxygen", sans-serif;
+    line-height: 1.5em;
     font-size: 16px;
+  }
+  button {
+    font-family: "Oxygen", sans-serif;
+  }
+  a {
+    font-family: "Oxygen", sans-serif;
   }
 }
 

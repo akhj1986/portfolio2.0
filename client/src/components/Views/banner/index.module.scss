@@ -1,0 +1,12 @@
+@import "../../../scss/mixins.scss";
+
+.container {
+  @include flex-row;
+  flex-direction: row-reverse;
+  flex: 1 0 auto;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: white;
+  padding: 60px 40px 0;
+  margin: 0 0 60px;
+}

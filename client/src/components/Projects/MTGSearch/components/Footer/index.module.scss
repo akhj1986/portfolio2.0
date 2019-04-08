@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  bottom: 0;
+  background: transparentize($color: black, $amount: 0.4);
+  max-width: 500px;
+}
+
+.content {
+  text-align: center;
+  font-size: 10px;
+}

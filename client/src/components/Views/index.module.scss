@@ -3,18 +3,11 @@
 .container {
   @include flex-column;
   flex: 1 0 auto;
-  padding: 0 40px;
+  //padding: 0 40px;
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    padding: 0 80px;
     justify-content: flex-start;
-  }
-}
-
-@media screen and (min-width: 1080px) {
-  .container {
-    padding: 0 120px;
   }
 }

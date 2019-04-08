@@ -1,70 +1,69 @@
 @import "../../scss/mixins.scss";
 
 .navBarIcons {
+  position: absolute;
+  top: 30px;
+  right: 40px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  font-size: 8px;
-  color: black;
-  margin: 0 0 0 10px;
+  font-size: 14px;
+  color: #777;
+  height: 30px;
+  margin: 0 0 50px;
+  opacity: 0.5;
 }
 
 .codeLangSkills {
   @include flex-row;
-  color: black;
+  color: #777;
   padding: 0 0 0 5px;
   font-weight: 100;
-  font-size: 18px;
+  font-size: 30px;
+  opacity: 0.5;
 }
 
 .codeLangSkills:hover {
-  background: transparentize(blue, 0.9);
   cursor: pointer;
-  color: $purpleText;
-  font-size: 19px;
+  color: $skyBlue;
   transition: font-size 0.3s;
   transition: color 0.3s;
 }
 
 @media screen and (min-width: 490px) {
-  .navBarIcons {
-    margin: 0 0 0 10px;
-  }
   .codeLangSkills {
-    font-size: 20px;
-    padding: 0 0 0 5px;
+    font-size: 30px;
   }
-  .codeLangSkills:hover {
-    font-size: 21px;
+}
+
+@media screen and (min-width: 600px) {
+  .codeLangSkills {
+    font-size: 40px;
   }
 }
 
 @media screen and (min-width: 900px) {
   .navBarIcons {
-    margin: 0 0 0 200px;
-    font-size: 12px;
+    top: 50px;
+    right: 50px;
   }
   .codeLangSkills {
-    padding: 0 0 0 10px;
-    font-size: 50px;
-  }
-  .codeLangSkills:hover {
-    font-size: 50.5px;
+    font-size: 60px;
   }
 }
 
 @media screen and (min-width: 1080px) {
   .navBarIcons {
-    margin: 0 0 0 310px;
+    margin: 0 0 60px;
   }
-  .navBar {
-    display: flex;
+  .codeLangSkills {
+    font-size: 60px;
   }
 }
 
-@media screen and (min-width: 1300px) {
-  .navBarIcons {
-    margin: 0 50px 0 450px;
-  }
-}
+// @media screen and (min-width: 1300px) {
+//   .navBarIcons {
+//     margin: 0 50px 0 450px;
+//   }
+// }

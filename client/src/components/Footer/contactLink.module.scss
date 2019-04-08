@@ -1,0 +1,47 @@
+@import "../../scss/mixins.scss";
+
+.contactLink {
+  margin: 0 0 50px;
+  font-size: 15px;
+  i {
+    color: transparentize($color: $deepBlue, $amount: 0.6);
+    font-size: 25px;
+  }
+  i:hover {
+    color: transparentize($color: $hotPink, $amount: 0.6);
+  }
+  a {
+    color: transparentize($color: white, $amount: 0.3);
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+  a:hover {
+    color: $hotPink;
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .contactLink {
+    margin: 0 0 35px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 490px) {
+  .contactLink {
+    margin: 0 0 50px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contactLink {
+    margin: 0 0 60px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contactLink {
+    margin: 0 0 50px;
+    font-size: 15px;
+  }
+}

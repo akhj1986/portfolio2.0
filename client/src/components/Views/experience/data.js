@@ -378,7 +378,7 @@ export const snippets = [
   },
   {
     name: "navbar",
-    heading: "Builing a NavBar",
+    heading: "Building a NavBar",
     language: "javascript",
     codeText: `
     //Use of array.prototype.map() to build a NavBar component---------- 

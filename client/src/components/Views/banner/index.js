@@ -1,24 +1,24 @@
 import React from "react"
-import styles from "./index.module.scss"
-import Banner from "./banner"
-import Experience from "./experience"
 import MediaQuery from "react-responsive"
+import styles from "./index.module.scss"
+import Photo from "./Photo"
+import Phrases from "./Phrases"
 
-const MainContent = () => {
+const Home = () => {
   return (
     <div className={styles.container}>
-      <MediaQuery maxWidth={489}>
+      <MediaQuery maxWidth={899}>
         {matches => {
           if (matches) {
-            return <Banner />
+            return <Photo />
           } else {
             return null
           }
         }}
       </MediaQuery>
-      <Experience />
+      <Phrases />
     </div>
   )
 }
 
-export default MainContent
+export default Home

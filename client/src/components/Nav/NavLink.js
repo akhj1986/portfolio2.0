@@ -6,8 +6,7 @@ const NavLinks = props => {
   const handleClick = e => {
     const { name } = e.target
     const nameY = document.getElementById([name]).getBoundingClientRect()
-    const Y = nameY.y
-    console.log("Clicked", Y)
+    const Y = nameY.y + window.scrollY
     window.scrollTo({
       top: Y,
       left: 0,

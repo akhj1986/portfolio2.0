@@ -1,54 +1,51 @@
 @import "../../scss/mixins.scss";
 
 .navBar {
-  background: $purpleBack;
-  height: 40px;
+  background-image: linear-gradient(to right, $skyBlue, $limeGreen);
+  height: 50px;
+  padding: 0 40px;
+  top: 0;
+  border-top: 1px solid;
+  border-color: transparentize($color: white, $amount: 0.6);
 }
 .navList {
   @include flex-row;
   max-width: 1170px;
-  height: 40px;
-  margin: 0 40px 0 35px;
+  height: 45px;
   padding: 3px 0 0;
-  align-items: center;
+  align-items: flex-end;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 490px) {
+  .navBar {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (min-width: 600px) {
   .navList {
-    justify-content: flex-start;
-    li {
-      margin: 0 55px 0 0;
-    }
+    max-width: 450px;
+    margin: auto;
   }
 }
 
 @media screen and (min-width: 768px) {
   .navList {
-    padding: 3px 77px 0;
     margin: auto;
-    li {
-      font-size: 16px;
-    }
   }
 }
 
 @media screen and (min-width: 900px) {
+  .navBar {
+    height: 55px;
+  }
   .navList {
-    li {
-      margin: 0 75px 0 0;
-    }
+    max-width: 550px;
+    height: 50px;
   }
 }
 @media screen and (min-width: 1080px) {
-  .navBar {
-    display: flex;
-  }
   .navList {
-    padding: 3px 117px 0;
-    margin: auto;
-    flex: 1 0 auto;
-    li {
-      margin: 0 110px 0 0;
-    }
+    max-width: 750px;
   }
 }

@@ -1,0 +1,73 @@
+@import "../../scss/mixins.scss";
+
+.outerContainer {
+  background: $darkerSkyBlue;
+}
+.container {
+  padding: 150px 40px;
+  color: white;
+  h1 {
+    letter-spacing: 4px;
+    margin: 0 0 60px;
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .container {
+    padding: 150px 60px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .container {
+    padding: 150px 80px;
+    h1 {
+      font-size: 35px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    @include flex-column;
+    max-width: 550px;
+    margin: auto;
+    flex: 1 0 auto;
+    justify-content: flex-start;
+    h1 {
+      padding: 0;
+      margin: 0 0 80px;
+    }
+  }
+  .paragraphHeadContact {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    max-width: 550px;
+    margin: auto;
+    flex: 1 0 auto;
+    h1 {
+      margin: 0 0 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .container {
+    max-width: 750px;
+    h1 {
+      margin: 0 0 60px;
+    }
+  }
+}
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: 900px;
+    h1 {
+      margin: 0 0 80px;
+    }
+  }
+}

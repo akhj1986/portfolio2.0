@@ -1,0 +1,66 @@
+@import "../../../scss/mixins.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 10px 0 0;
+  height: 80px;
+  opacity: 0.05;
+  transition: opacity 2s ease-in-out;
+}
+.mediumText {
+  font-size: 25px;
+  color: darken($darkerSkyBlue, 15);
+}
+
+@media screen and (min-width: 490px) {
+  .container {
+    height: 50px;
+    margin: 60px 0 50px;
+  }
+
+  .mediumText {
+    font-size: 38px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .mediumText {
+    letter-spacing: 3px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    height: 60px;
+  }
+
+  .mediumText {
+    font-size: 38px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    justify-content: center;
+    height: 80px;
+  }
+
+  .mediumText {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .container {
+    justify-content: center;
+    height: 100px;
+  }
+
+  .mediumText {
+    font-size: 45px;
+  }
+}

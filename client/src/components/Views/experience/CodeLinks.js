@@ -35,28 +35,30 @@ class CodeLinks extends Component {
   render() {
     return (
       <div className={styles.container} id="code">
-        <h1 className={styles.header}>Coding-example snippets</h1>
-        <div className={styles.linksContainer}>
-          {this.state.exampleCode && (
-            <CodeExample
-              handleClick={this.handleClick}
-              codeText={this.state.codeText}
-              style={this.state.codeLanguage}
-            />
-          )}
-          {this.state.snippets.map(snip => {
-            return (
-              <button
-                name={snip.name}
-                value={snip.codeText}
-                key={snip.name}
-                onClick={this.handleClick}
-                className={styles.codeButton}
-              >
-                {snip.heading}
-              </button>
-            )
-          })}
+        <div className={styles.widthConstrictor}>
+          <h1 className={styles.header}>{`<Code Snippets />`}</h1>
+          <div className={styles.linksContainer}>
+            {this.state.exampleCode && (
+              <CodeExample
+                handleClick={this.handleClick}
+                codeText={this.state.codeText}
+                style={this.state.codeLanguage}
+              />
+            )}
+            {this.state.snippets.map(snip => {
+              return (
+                <button
+                  name={snip.name}
+                  value={snip.codeText}
+                  key={snip.name}
+                  onClick={this.handleClick}
+                  className={styles.codeButton}
+                >
+                  {snip.heading}
+                </button>
+              )
+            })}
+          </div>
         </div>
       </div>
     )

@@ -4,7 +4,7 @@ import styles from "./contact.module.scss"
 
 const Contact = () => {
   return (
-    <div>
+    <div className={styles.outerContainer}>
       <div className={styles.container}>
         <div className={styles.paragraphHeadContact}>
           <h1>Contact Me</h1>

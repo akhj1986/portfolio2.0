@@ -4,26 +4,24 @@
   color: white;
   @include flex-column;
   justify-content: center;
-  height: 33px;
+  height: 35px;
   padding: 0 5px;
   background: none;
   border: 0px;
   border-bottom: solid 4px transparent;
-  font-family: "Scada", sans-serif;
   letter-spacing: 2px;
-  &.projects {
-    width: 74px;
-  }
-  &.code {
-    width: 125px;
-  }
-  &.contact {
-    width: 68px;
-  }
 }
 
 .navItem:hover {
-  color: $purpleText;
-  font-weight: bold;
-  border-bottom: solid 4px #6e06d6;
+  color: $violet;
+  border-bottom: solid 4px lighten($hotPink, 10);
+}
+
+@media screen and (min-width: 900px) {
+  .navItem {
+    margin: 9px 0 0;
+    padding: 0 0 2px;
+    font-size: 16px;
+    letter-spacing: 4px;
+  }
 }

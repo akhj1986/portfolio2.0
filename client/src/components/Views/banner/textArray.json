@@ -1,0 +1,74 @@
+{
+  "texts": [
+    {
+      "text": "ReactJS",
+      "className": "mediumText",
+      "type": "react"
+    },
+    {
+      "text": "ReactJS",
+      "className": "mediumText",
+      "type": "react"
+    },
+    {
+      "text": "Redux",
+      "className": "mediumText"
+    },
+    {
+      "text": "Redux",
+      "className": "mediumText"
+    },
+    {
+      "text": "ES6, HTML5, CSS3",
+      "className": "mediumText",
+      "type": "html"
+    },
+    {
+      "text": "ES6, HTML5, CSS3",
+      "className": "mediumText",
+      "type": "html"
+    },
+    
+    {
+      "text": "Flexbox",
+      "className": "mediumText",
+      "type": "flexbox"
+    },
+    {
+      "text": "Flexbox",
+      "className": "mediumText",
+      "type": "flexbox"
+    },
+    {
+      "text": "CSS Grid",
+      "className": "mediumText",
+      "type": "grid"
+    },
+    {
+      "text": "CSS Grid",
+      "className": "mediumText",
+      "type": "grid"
+    }
+  ],
+  "notInUse": [
+    {
+      "text": "Bootstrap",
+      "className": "mediumText"
+    },
+    {
+      "text": "Responsive, mobile-first design...",
+      "className": "mediumText"
+    },
+    {
+      "text": "Responsive, mobile-first design...",
+      "className": "mediumText"
+    },{
+      "text": "The latest technologies...",
+      "className": "mediumText"
+    },
+    {
+      "text": "The latest technologies...",
+      "className": "mediumText"
+    }
+  ]
+}

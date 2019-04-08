@@ -1,9 +1,10 @@
 @import "../../../scss/mixins.scss";
 
 .container {
-  margin: 0 0 20px;
+  margin: 0 0 100px;
+  padding: 0 40px;
   p {
-    margin: 0 0 10px 0;
+    margin: 0 0 30px;
   }
 }
 .header {
@@ -19,53 +20,62 @@
   border: none;
   background: white;
   padding: 0;
-  margin: 0 0 20px;
-  font-family: "Scada", sans-serif;
   letter-spacing: 2px;
   color: #555;
   font-weight: bold;
-  color: $purpleText;
+  color: darken($darkerSkyBlue, 20);
 }
 
 .readMore:hover {
   font-weight: bold;
   color: black;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 490px) {
   .container {
-    margin: 0 0 30px;
+    padding: 0 60px;
   }
   .summary {
     display: flex;
   }
-  .readMore {
-    margin: 0 0 40px;
+}
+@media screen and (min-width: 600px) {
+  .container {
+    padding: 0 80px;
+    p {
+      font-size: 18px;
+    }
   }
-  .header {
-    font-size: 25px;
+  .readMore {
+    font-size: 16px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    margin: 0;
-  }
-  .header {
-    margin: 0 0 20px;
+    margin: 100px auto 130px;
+    max-width: 550px;
+    padding: 0;
   }
 }
 
 @media screen and (min-width: 900px) {
   .container {
     padding: 0;
-    margin: 0 auto 20px;
+    margin: 0 auto 130px;
   }
 }
 
 @media screen and (min-width: 1080px) {
   .container {
-    max-width: 1170px;
+    max-width: 750px;
     justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: 900px;
   }
 }

@@ -3,7 +3,9 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin: 0 0 40px;
+  padding: 120px 40px;
+  background-color: white;
+  background-image: url("../../../img/grey-jean.png");
 }
 
 .linksContainer {
@@ -13,38 +15,76 @@
 }
 
 .header {
-  margin: 0 0 15px;
+  letter-spacing: 3px;
+  margin: 0 0 60px;
+  font-size: 25px;
+  color: $midBlue;
 }
 
 .codeButton {
   border: none;
   text-align: left;
-  background: white;
+  background: transparent;
+  font-size: 15px;
   padding: 0;
-  margin: 0 0 15px;
-  font-family: "Scada", sans-serif;
+  margin: 0 0 35px;
   letter-spacing: 2px;
-  color: #555;
   font-weight: bold;
-  color: $purpleText;
+  color: $deepBlue;
 }
 
 .codeButton:hover {
-  font-weight: bold;
-  color: black;
+  color: darken($darkerSkyBlue, 20);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 490px) {
+  .container {
+    padding: 120px 60px;
+  }
+  .codeButton {
+    font-size: 18px;
+  }
+  .header {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .container {
+    padding: 120px 80px;
+  }
+  .header {
+    font-size: 35px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .widthConstrictor {
+    max-width: 550px;
+    margin: auto;
+  }
   .linksContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-column-gap: 30px;
+    grid-column-gap: 80px;
   }
 }
 
 @media screen and (min-width: 1080px) {
+  .widthConstrictor {
+    max-width: 750px;
+  }
   .linksContainer {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 150px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .widthConstrictor {
+    max-width: 900px;
+  }
+  .linksContainer {
+    grid-column-gap: 200px;
   }
 }

@@ -1,30 +1,51 @@
 @import "../../../scss/mixins.scss";
 
+.projectsID {
+  padding: 100px 40px;
+  min-height: 100vh;
+  background-image: linear-gradient(to left, $skyBlue, #00d8dc);
+}
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
+
   margin: 0 0 30px;
 }
 
 .projectLink {
-  margin: 0 0 40px;
+  margin: 0 0 60px;
+  box-shadow: 1px 1px 10px transparentize($color: #222, $amount: 0.5);
+  background: white;
   img {
     width: 100%;
     height: auto;
     margin: 0 0 8px;
   }
+}
+
+.textBox {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
   p {
     font-size: 12px;
+    margin: 0 0 10px;
   }
 }
+
 .header {
-  margin: 0 0 15px;
+  margin: 0 0 60px;
+  letter-spacing: 4px;
+  font-size: 30px;
   align-self: flex-start;
+  color: #f5f5f5;
+  //text-shadow: 1px 1px 5px #111;
 }
 .linkHeader {
-  margin: 0 0 5px;
+  margin: 0 0 10px;
   font-size: 18px;
 }
 
@@ -32,30 +53,23 @@
   border: none;
   background: white;
   padding: 0;
-  margin: 0 0 20px;
-  font-family: "Scada", sans-serif;
+  margin: 0 0 10px;
   letter-spacing: 2px;
-  color: #555;
+  //color: #555;
   font-weight: bold;
-  color: $purpleText;
+  color: darken($darkerSkyBlue, 20);
 }
 
 .codeButton:hover {
   font-weight: bold;
   color: black;
-}
-
-.repositoryLink {
-  a {
-    color: black;
-    font-size: 120px;
-  }
-  p {
-    font-size: 12px;
-  }
+  cursor: pointer;
 }
 
 @media screen and (min-width: 490px) {
+  .projectsID {
+    padding: 100px 60px;
+  }
   .projectLink {
     p {
       font-size: 14px;
@@ -67,63 +81,74 @@
   }
 }
 
+@media screen and (min-width: 600px) {
+  .projectsID {
+    padding: 100px 80px;
+  }
+  .header {
+    font-size: 35px;
+  }
+}
 @media screen and (min-width: 768px) {
   .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  .projectLink {
-    margin: 0;
-    width: 280px;
-    p {
-      font-size: 14px;
-    }
-    img {
-      width: 280px;
-    }
+    max-width: 550px;
+    margin: auto;
   }
   .linkHeader {
-    margin: 0 0 5px;
+    margin: 0 0 10px;
     font-size: 20px;
   }
+  .projectLink {
+    margin: 0 0 100px;
+  }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1080px) {
   .container {
-    margin: 30px 0 30px;
-    padding: 0;
-  }
-  .projectLink {
-    margin: 0;
-    width: 330px;
-    p {
-      font-size: 15px;
-    }
-    img {
-      width: 330px;
-    }
-  }
-}
-
-@media screen and (min-width: 980px) {
-  .projectLink {
-    width: 370px;
+    max-width: 750px;
     p {
       font-size: 16px;
     }
+  }
+  .projectLink {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
     img {
-      width: 370px;
+      width: 330px;
+    }
+    p {
+      font-size: 13px;
     }
   }
+  .innerContainer {
+    width: 750px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .textBox {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: 900px;
+  }
   .projectLink {
-    width: 35vw;
-    max-width: 520px;
+    width: 400px;
     img {
-      width: 35vw;
-      max-width: 520px;
+      width: 400px;
     }
+    p {
+      font-size: 13px;
+    }
+  }
+  .innerContainer {
+    width: 900px;
+    max-width: 900px;
   }
 }
