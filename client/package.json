@@ -6,7 +6,7 @@
     "classnames": "^2.2.6",
     "moment": "^2.24.0",
     "mtgsdk": "^0.4.2",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-highlight": "^0.12.0",
